@@ -106,6 +106,8 @@ class InputJsonInfoZnzmo:
                 if value != {}:
                     output_json[key] = value
             else:
+                print(f"不支持的类型: {type(value)}")
+                continue
                 raise ValueError(f"不支持的类型: {type(value)}")
                 
         return (json.dumps(output_json, indent=4, ensure_ascii=False),)

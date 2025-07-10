@@ -1,0 +1,4 @@
+pymilvus
+openai
+omegaconf
+debugpy

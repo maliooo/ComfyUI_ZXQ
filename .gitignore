@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # OSX useful to ignore
 *.DS_Store
@@ -99,3 +100,6 @@ cookiecutter-pypackage-env/
 .history/
 *.code-workspace
 input_template.json
+
+# config文件夹不提交
+config/

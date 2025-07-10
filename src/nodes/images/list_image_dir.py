@@ -2,8 +2,22 @@ import os
 import random
 import glob
 from pathlib import Path
+from ...utils.image_utils import load_image_by_path
+from rich import print
 
-DEFAULT_FOLDER_PATH = r""
+# try:
+#     import debugpy
+#     print("[yellow]debugpy is loaded[/yellow]")
+#     debugpy.listen(5678)
+#     print("[yellow]debugpy is listening on port 5678[/yellow]")
+#     debugpy.wait_for_client()
+#     print("[yellow]debugpy is connected[/yellow]")
+# except ImportError:
+#     print("[red]debugpy is not installed[/red]")
+
+DEFAULT_FOLDER_PATH = r"/Volumes/Lexar-4T/Lexar-下载/方案深化渲染-测试图集"  # 默认文件夹路径
+FILEBROWSER_URL_PREFIX = "http://1.180.12.34:58100/api/public/dl/YNjtgXCT"  # filebrowser的url前缀
+FILEBROWSER_DIR_PREFIX = "/home/public/filebrowser/data/测试-01"  # filebrowser的url替换文件夹路径前缀，用于将服务器上的文件路径转换为filebrowser的url
 
 class ListImageDir:
     """
@@ -15,8 +29,8 @@ class ListImageDir:
         image_extensions: 图片文件扩展名，默认为 jpg,jpeg,png,gif,bmp,webp
     输出：
         image: 根据seed选择的文件夹中的图片
+        mask: image对应的图片的mask
         image_path: 根据seed选择的文件夹中的图片路径
-        image_list: 选中文件夹中的所有图片路径列表
         image_count: 选中文件夹中的图片总数
     """
 
@@ -24,13 +38,14 @@ class ListImageDir:
     def INPUT_TYPES(cls):
         folder_path_list = os.listdir(DEFAULT_FOLDER_PATH)
         folder_path_list = [folder_path for folder_path in folder_path_list if os.path.isdir(os.path.join(DEFAULT_FOLDER_PATH, folder_path))]
+        folder_path_list = ["None"] + folder_path_list
         return {
             "required": {
                 "folder_path": (
                     folder_path_list,
                     {
                         "default": folder_path_list[0],
-                        "tooltip": f"根据默认{DEFAULT_FOLDER_PATH}文件夹路径，将列出该路径下的所有子文件夹",
+                        "tooltip": f"根据默认【{DEFAULT_FOLDER_PATH}】文件夹路径，将列出该路径下的所有子文件夹",
                     },
                 ),
                 "seed": (
@@ -52,8 +67,8 @@ class ListImageDir:
             },
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "INT")
-    RETURN_NAMES = ("selected_folder", "image_list", "folder_count")
+    RETURN_TYPES = ("IMAGE", "MASK", "STRING", "STRING", "INT")
+    RETURN_NAMES = ("image", "mask", "image_path", "filebrowser_url", "image_count")
     OUTPUT_NODE = False
 
     FUNCTION = "forward"
@@ -64,48 +79,30 @@ class ListImageDir:
 
     def forward(self, folder_path, seed, image_extensions):
         # 检查文件夹路径是否存在
-        if not folder_path or not os.path.exists(folder_path):
-            return ("", "", 0)
+        if not folder_path or not os.path.exists(Path(DEFAULT_FOLDER_PATH) / folder_path) or folder_path == "None":
+            return (None, None, None, None, 0)
+
         
-        # 获取所有子文件夹
-        subfolders = []
-        try:
-            for item in os.listdir(folder_path):
-                item_path = os.path.join(folder_path, item)
-                if os.path.isdir(item_path):
-                    subfolders.append(item_path)
-        except Exception as e:
-            print(f"读取文件夹时出错: {e}")
-            return ("", "", 0)
+        # 获取文件夹下的所有图片文件, 并过滤掉非图片文件, 并返回图片路径列表, 并排序
+        image_files = os.listdir(Path(DEFAULT_FOLDER_PATH) / folder_path)
+        image_files = [file for file in image_files if file.endswith(tuple(image_extensions.split(","))) and os.path.isfile(os.path.join(DEFAULT_FOLDER_PATH, folder_path, file))]
+        image_files = [os.path.join(DEFAULT_FOLDER_PATH, folder_path, file) for file in image_files]
+        image_files = [file for file in image_files if os.path.isfile(file)]
+        image_files.sort()
+
+        # 根据seed选择图片
+        selected_image_path = image_files[seed % len(image_files)]
+        selected_image = load_image_by_path(selected_image_path)
+        image, mask = selected_image
+
+        # filebrowser_url, 将selected_image_path转换为filebrowser_url
+        filebrowser_url = None
+        if FILEBROWSER_DIR_PREFIX in selected_image_path:
+            # 将selected_image_path中的FILEBROWSER_DIR_PREFIX替换为FILEBROWSER_URL_PREFIX，将服务器上的文件路径转换为filebrowser的url
+            filebrowser_url = selected_image_path.replace(FILEBROWSER_DIR_PREFIX, FILEBROWSER_URL_PREFIX)
+
+        return (image, mask, selected_image_path, filebrowser_url, len(image_files))
         
-        folder_count = len(subfolders)
-        if folder_count == 0:
-            return ("", "", 0)
-        
-        # 使用seed选择文件夹
-        random.seed(seed)
-        selected_folder = random.choice(subfolders)
-        
-        # 获取图片扩展名列表
-        extensions = [ext.strip().lower() for ext in image_extensions.split(",")]
-        
-        # 获取选中文件夹中的所有图片
-        image_files = []
-        try:
-            for ext in extensions:
-                pattern = os.path.join(selected_folder, f"*.{ext}")
-                image_files.extend(glob.glob(pattern))
-                # 也查找大写扩展名
-                pattern = os.path.join(selected_folder, f"*.{ext.upper()}")
-                image_files.extend(glob.glob(pattern))
-        except Exception as e:
-            print(f"读取图片文件时出错: {e}")
-            return (selected_folder, "", folder_count)
-        
-        # 将图片路径列表转换为字符串
-        image_list = "\n".join(image_files)
-        
-        return (selected_folder, image_list, folder_count)
 
 
 if __name__ == "__main__":

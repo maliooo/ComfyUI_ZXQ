@@ -10,6 +10,7 @@ from rich import print
 from .base_service import BaseService
 import pandas as pd
 from pathlib import Path
+from torch import Tensor
 
 ADE20K_CSV_PATH = Path(__file__).parent / "ade20k.csv"
 
@@ -441,17 +442,87 @@ class SegLabelRatioSelector:
         else:
             return json.dumps(info, ensure_ascii=False)
 
+class MaskedNearestFill:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "image": ("IMAGE",),
+                "mask": ("MASK",),
+            }
+        }
+
+    RETURN_TYPES = ("IMAGE",)
+    CATEGORY = "ZXQ/Segmentation"
+    FUNCTION = "fill"
+
+    _NODE_NAME = "最近邻填充-segment_nearest_fill"
+    _NODE_ZXQ = "最近邻填充-segment_nearest_fill"
+    DESCRIPTION = "使用最近邻填充，填充mask区域"
+
+    def fill(self, image: Tensor, mask: Tensor):
+        from scipy.ndimage import distance_transform_edt
+        import numpy as np
+        
+        image = image.detach().clone()
+        mask = self._mask_unsqueeze(self._mask_floor(mask))
+        assert mask.shape[0] == image.shape[0], "Image and mask batch size does not match"
+        
+        for slice, mask_slice in zip(image, mask):
+            mask_np = mask_slice.squeeze().cpu().numpy()
+            image_np = slice.cpu().numpy()
+            
+            # 创建mask的布尔版本
+            mask_bool = mask_np > 0.5
+            
+            if not mask_bool.any():
+                continue
+                
+            # 对每个颜色通道分别进行最近邻填充
+            for channel in range(image_np.shape[2]):
+                channel_data = image_np[:, :, channel]
+                
+                # 计算到最近非mask像素的距离
+                distance, indices = distance_transform_edt(
+                    mask_bool, 
+                    return_indices=True
+                )
+                
+                # 使用最近邻像素值填充mask区域
+                filled_channel = channel_data[indices[0], indices[1]]
+                
+                # 只在mask区域应用填充
+                channel_data[mask_bool] = filled_channel[mask_bool]
+            
+            # 更新tensor
+            slice.copy_(torch.from_numpy(image_np))
+        
+        return (image,)
+    
+    def _mask_unsqueeze(mask: Tensor):
+        if len(mask.shape) == 3:  # BHW -> B1HW
+            mask = mask.unsqueeze(1)
+        elif len(mask.shape) == 2:  # HW -> B1HW
+            mask = mask.unsqueeze(0).unsqueeze(0)
+        return mask
+
+    def _mask_floor(self, mask: Tensor, threshold: float = 0.99):
+        return (mask >= threshold).to(mask.dtype)
+
+
 
 NODE_CLASS_MAPPINGS = {
     "SegmentationService": SegmentationService,
     "MasksProcessorService": MasksProcessorService,
     "SegMergeJson": SegMergeJson,
-    "SegLabelRatioSelector": SegLabelRatioSelector
+    "SegLabelRatioSelector": SegLabelRatioSelector,
+    "MaskedNearestFill": MaskedNearestFill
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "SegmentationService": "图像分割服务",
     "MasksProcessorService": "掩码处理器",
     "SegMergeJson": "SEG-颜色材质-JSON合并器",
-    "SegLabelRatioSelector": "SEG-标签比例选择器"
+    "SegLabelRatioSelector": "SEG-标签比例选择器",
+    "MaskedNearestFill": "最近邻填充-分割图"
 }

@@ -458,44 +458,66 @@ class MaskedNearestFill:
 
     _NODE_NAME = "最近邻填充-segment_nearest_fill"
     _NODE_ZXQ = "最近邻填充-segment_nearest_fill"
-    DESCRIPTION = "使用最近邻填充，填充mask区域"
+    DESCRIPTION = "使用边界众数颜色填充mask区域"
 
     def fill(self, image: Tensor, mask: Tensor):
-        from scipy.ndimage import distance_transform_edt
+        import cv2
         import numpy as np
         
         image = image.detach().clone()
         mask = self._mask_unsqueeze(self._mask_floor(mask))
         assert mask.shape[0] == image.shape[0], "Image and mask batch size does not match"
         
-        for slice, mask_slice in zip(image, mask):
-            mask_np = mask_slice.squeeze().cpu().numpy()
-            image_np = slice.cpu().numpy()
+        for slice_idx, (image_slice, mask_slice) in enumerate(zip(image, mask)):
+            # 转换为numpy数组，并确保正确的格式
+            image_np = (image_slice.cpu().numpy() * 255).astype(np.uint8)
+            mask_np = (mask_slice.squeeze().cpu().numpy() * 255).astype(np.uint8)
             
-            # 创建mask的布尔版本
-            mask_bool = mask_np > 0.5
+            # 确保图像是BGR格式（OpenCV格式）
+            if image_np.shape[2] == 3:
+                # 如果是RGB格式，转换为BGR
+                image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
             
-            if not mask_bool.any():
-                continue
-                
-            # 对每个颜色通道分别进行最近邻填充
-            for channel in range(image_np.shape[2]):
-                channel_data = image_np[:, :, channel]
-                
-                # 计算到最近非mask像素的距离
-                distance, indices = distance_transform_edt(
-                    mask_bool, 
-                    return_indices=True
-                )
-                
-                # 使用最近邻像素值填充mask区域
-                filled_channel = channel_data[indices[0], indices[1]]
-                
-                # 只在mask区域应用填充
-                channel_data[mask_bool] = filled_channel[mask_bool]
+            # 创建二值mask
+            _, mask_binary = cv2.threshold(mask_np, 127, 255, cv2.THRESH_BINARY)
+            output_image = image_np.copy()
             
-            # 更新tensor
-            slice.copy_(torch.from_numpy(image_np))
+            # 找到所有轮廓
+            contours, _ = cv2.findContours(mask_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            # 处理每个轮廓
+            for contour in contours:
+                # 创建临时mask用于当前轮廓
+                temp_mask = np.zeros_like(mask_binary)
+                cv2.drawContours(temp_mask, [contour], -1, 255, thickness=cv2.FILLED)
+                
+                # 创建边界带
+                kernel = np.ones((5, 5), np.uint8)
+                dilated_mask = cv2.dilate(temp_mask, kernel, iterations=1)
+                border_strip_mask = cv2.subtract(dilated_mask, temp_mask)
+                
+                # 提取边界带内的像素
+                border_pixels = output_image[border_strip_mask == 255]
+                
+                if border_pixels.size > 0:
+                    # 找到众数颜色
+                    unique_colors, counts = np.unique(border_pixels, axis=0, return_counts=True)
+                    mode_color_bgr = unique_colors[counts.argmax()]
+                    fill_color = tuple(int(c) for c in mode_color_bgr)
+                else:
+                    # 备用方案：使用黑色
+                    fill_color = (0, 0, 0)
+                
+                # 填充当前轮廓区域
+                cv2.drawContours(output_image, [contour], -1, fill_color, thickness=cv2.FILLED)
+            
+            # 转换回RGB格式并归一化
+            if output_image.shape[2] == 3:
+                output_image = cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB)
+            
+            # 转换回tensor格式
+            output_tensor = torch.from_numpy(output_image.astype(np.float32) / 255.0)
+            image[slice_idx] = output_tensor
         
         return (image,)
     
@@ -506,7 +528,7 @@ class MaskedNearestFill:
             mask = mask.unsqueeze(0).unsqueeze(0)
         return mask
 
-    def _mask_floor(self, mask: Tensor, threshold: float = 0.99):
+    def _mask_floor(self, mask: Tensor, threshold: float = 0.5):
         return (mask >= threshold).to(mask.dtype)
 
 

@@ -499,7 +499,7 @@ class MaskedNearestFill:
         
         return (image,)
     
-    def _mask_unsqueeze(mask: Tensor):
+    def _mask_unsqueeze(self, mask: Tensor):
         if len(mask.shape) == 3:  # BHW -> B1HW
             mask = mask.unsqueeze(1)
         elif len(mask.shape) == 2:  # HW -> B1HW

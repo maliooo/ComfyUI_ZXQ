@@ -27,8 +27,8 @@ class ImageResize:
     RETURN_NAMES = ("IMAGE", "width", "height", "mask",)
     FUNCTION = "execute"
 
-    _NODE_ZXQ = "缩放图片"
-    DESCRIPTION = "缩放图片"
+    _NODE_ZXQ = "缩放图片 image resize"
+    DESCRIPTION = "缩放图片, 如果使用pad模式, 会创建一个mask, 标识原始图像区域（非填充区域）"
     CATEGORY = "ZXQ/图片处理"
 
     def execute(self, image, width, height, method="stretch", interpolation="nearest", condition="always", multiple_of=0, keep_proportion=False):

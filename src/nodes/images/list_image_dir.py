@@ -36,9 +36,12 @@ class ListImageDir:
 
     @classmethod
     def INPUT_TYPES(cls):
-        folder_path_list = os.listdir(DEFAULT_FOLDER_PATH)
-        folder_path_list = [folder_path for folder_path in folder_path_list if os.path.isdir(os.path.join(DEFAULT_FOLDER_PATH, folder_path))]
-        folder_path_list = ["None"] + folder_path_list
+        if os.path.exists(DEFAULT_FOLDER_PATH):
+            folder_path_list = os.listdir(DEFAULT_FOLDER_PATH)
+            folder_path_list = [os.path.join(DEFAULT_FOLDER_PATH, folder_path) for folder_path in folder_path_list if os.path.isdir(os.path.join(DEFAULT_FOLDER_PATH, folder_path))]
+            folder_path_list = ["None"] + folder_path_list
+        else:
+            folder_path_list = ["None"]
         return {
             "required": {
                 "folder_path": (
@@ -79,15 +82,15 @@ class ListImageDir:
 
     def forward(self, folder_path, seed, image_extensions):
         # 检查文件夹路径是否存在
-        if not folder_path or not os.path.exists(Path(DEFAULT_FOLDER_PATH) / folder_path) or folder_path == "None":
+        if not os.path.exists(folder_path) or folder_path == "None":
             return (None, None, None, None, 0)
 
-        
+
         # 获取文件夹下的所有图片文件, 并过滤掉非图片文件, 并返回图片路径列表, 并排序
-        image_files = os.listdir(Path(DEFAULT_FOLDER_PATH) / folder_path)
-        image_files = [file for file in image_files if file.endswith(tuple(image_extensions.split(","))) and os.path.isfile(os.path.join(DEFAULT_FOLDER_PATH, folder_path, file))]
-        image_files = [os.path.join(DEFAULT_FOLDER_PATH, folder_path, file) for file in image_files]
-        image_files = [file for file in image_files if os.path.isfile(file)]
+
+        image_files = os.listdir(folder_path)
+        image_files = [file for file in image_files if file.endswith(tuple(image_extensions.split(","))) and os.path.isfile(os.path.join(folder_path, file))]
+        image_files = [os.path.join(folder_path, file) for file in image_files]
         image_files.sort()
 
         # 根据seed选择图片

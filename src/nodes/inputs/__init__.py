@@ -24,6 +24,6 @@ for filename in os.listdir(current_dir):
                 __all__.append(name)
                 # 将类对象导入到当前命名空间
                 globals()[name] = obj
-                print(f"[red]已经加载： {name}[/red]")
+                # print(f"[red]已经加载： {name}[/red]")
 
 

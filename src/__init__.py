@@ -13,7 +13,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 
 # 导入src中的所有obj， 判断是否是class，如果是class，则导入
 for name, obj in list(globals().items()):
-    print(f"[blue]name: {name}, obj: {obj}[/blue]")
+    # print(f"[blue]name: {name}, obj: {obj}[/blue]")
     if isinstance(obj, type) and hasattr(obj, "_NODE_ZXQ"):
         node_name = f"ZXQ_{name}"
         NODE_CLASS_MAPPINGS[node_name] = obj

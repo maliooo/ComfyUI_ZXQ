@@ -1,0 +1,27 @@
+# OpenRoute图片分析节点依赖包
+# 请使用以下命令安装依赖：
+# pip install -r requirements.txt
+
+# OpenAI客户端库
+openai>=1.0.0
+
+# 图片处理库
+Pillow>=9.0.0
+
+# 深度学习框架
+torch>=1.9.0
+numpy>=1.21.0
+
+# 进度条显示
+tqdm>=4.62.0
+
+# 可选依赖（如果使用高级功能）
+# requests>=2.25.0  # HTTP请求库
+# aiohttp>=3.8.0    # 异步HTTP客户端
+# asyncio           # Python内置异步库
+# logging           # Python内置日志库
+# json              # Python内置JSON库
+# base64            # Python内置base64库
+# io                # Python内置IO库
+# pathlib           # Python内置路径库
+# typing            # Python内置类型提示库 

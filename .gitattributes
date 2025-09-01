@@ -1,0 +1,10 @@
+# 将所有文本文件（自动检测）的行尾符设置为 LF
+* text=auto eol=lf
+
+# 明确指定以下常见文本文件为 text，并设置行尾符和编码
+*.py text eol=lf charset=utf-8
+*.js text eol=lf charset=utf-8
+*.css text eol=lf charset=utf-8
+*.html text eol=lf charset=utf-8
+*.json text eol=lf charset=utf-8
+*.md text eol=lf charset=utf-8

@@ -103,3 +103,4 @@ input_template.json
 
 # config文件夹不提交
 config/
+input_template.json

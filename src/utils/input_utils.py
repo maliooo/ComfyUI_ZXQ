@@ -3,6 +3,7 @@ import requests
 import traceback
 from pathlib import Path
 from datetime import datetime, timedelta
+from typing import Literal
 
 
 input_info_json_cache = {
@@ -50,6 +51,29 @@ def get_input_json_info():  # -> Any:
             else:
                 raise ValueError(f"从{json_url}获取输入ai_workflow_json_exp.json失败从获取输入参数的键失败，且本地没有缓存文件: {e}\n{traceback.format_exc()}")
     return json.loads(content)
+
+def value_to_type(value:str, type:str = Literal["INT", "FLOAT", "STRING", "BOOLEAN", "LIST", "DICT"]):
+    """
+    将字符串转换为指定类型
+    """
+    if value == "" or str(value).strip() == "":
+        return None
+
+    if type == "INT":
+        return int(value)
+    elif type == "FLOAT":
+        return float(value)
+    elif type == "STRING":
+        return str(value)
+    elif type == "BOOLEAN":
+        return bool(value)
+    elif type == "LIST":
+        return json.loads(value)
+    elif type == "DICT":
+        return json.loads(value)
+    else:
+        print(f"[red]输入{value}, 不支持的类型: {type}[/red]")
+        return None
 
 
 if __name__ == "__main__":

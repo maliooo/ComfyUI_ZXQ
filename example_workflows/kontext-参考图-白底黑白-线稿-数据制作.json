@@ -1,0 +1,7686 @@
+{
+  "id": "cb18b93d-0022-414a-ab2d-fbc318f8374f",
+  "revision": 0,
+  "last_node_id": 233,
+  "last_link_id": 300,
+  "nodes": [
+    {
+      "id": 43,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        -690.513916015625,
+        2759.504638671875
+      ],
+      "size": [
+        262.4234313964844,
+        113
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 210
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            53
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/原始图片1",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 41,
+      "type": "ZXQ_ListImageDir",
+      "pos": [
+        -324.2879638671875,
+        3416.18701171875
+      ],
+      "size": [
+        383.8169860839844,
+        210
+      ],
+      "flags": {},
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "folder_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "folder_path"
+          },
+          "link": 46
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            286
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "filebrowser_url",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZXQ_ListImageDir"
+      },
+      "widgets_values": [
+        "None",
+        239666018,
+        "randomize",
+        "jpg,jpeg,png,gif,bmp,webp"
+      ]
+    },
+    {
+      "id": 52,
+      "type": "ZXQ_ListImageDir",
+      "pos": [
+        -333.280517578125,
+        2836.57080078125
+      ],
+      "size": [
+        383.8169860839844,
+        210
+      ],
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "folder_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "folder_path"
+          },
+          "link": 53
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            288
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "filebrowser_url",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "image_count",
+          "type": "INT",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZXQ_ListImageDir"
+      },
+      "widgets_values": [
+        "None",
+        292747237,
+        "randomize",
+        "jpg,jpeg,png,gif,bmp,webp"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        -616.4419555664062,
+        3706.9775390625
+      ],
+      "size": [
+        262.4234313964844,
+        113
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 211
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            46
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/原始图片2",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 55,
+      "type": "GetNode",
+      "pos": [
+        -608.0502319335938,
+        2976.632568359375
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "title": "Get_seed_0",
+      "properties": {},
+      "widgets_values": [
+        "seed_0"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 56,
+      "type": "GetNode",
+      "pos": [
+        -676.518310546875,
+        3445.1318359375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            57
+          ]
+        }
+      ],
+      "title": "Get_seed_0",
+      "properties": {},
+      "widgets_values": [
+        "seed_0"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 107,
+      "type": "GetNode",
+      "pos": [
+        5445.337890625,
+        2907.74560546875
+      ],
+      "size": [
+        214.91366577148438,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "title": "Get_效果图-保存文件夹路径",
+      "properties": {},
+      "widgets_values": [
+        "效果图-保存文件夹路径"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "YogurtSaveTextBridge",
+      "pos": [
+        5880.267578125,
+        2791.05517578125
+      ],
+      "size": [
+        400,
+        292
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "content",
+          "type": "STRING",
+          "widget": {
+            "name": "content"
+          },
+          "link": 121
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 119
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveTextBridge"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "ComfyUI",
+        "true",
+        ".txt",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 111,
+      "type": "Text Multiline",
+      "pos": [
+        5097.88525390625,
+        2660.901611328125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 54,
+      "type": "SetNode",
+      "pos": [
+        -1529.6671142578125,
+        3364.296630859375
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_seed_0",
+      "properties": {
+        "previousName": "seed_0"
+      },
+      "widgets_values": [
+        "seed_0"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 36,
+      "type": "GetNode",
+      "pos": [
+        3213.53955078125,
+        7900.5263671875
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 129,
+      "type": "ImageStitch",
+      "pos": [
+        1249.4197998046875,
+        7555.8603515625
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 159
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            161,
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1579.419921875,
+        7495.8603515625
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1
+      ]
+    },
+    {
+      "id": 131,
+      "type": "GetImageSize",
+      "pos": [
+        1289.4197998046875,
+        7775.86083984375
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 81,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            165
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            166
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "GetNode",
+      "pos": [
+        999.4198608398438,
+        7525.8603515625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            159
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 135,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1579.419921875,
+        7645.86083984375
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 94,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 164
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 165
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            167
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        1881.058837890625,
+        7585.544921875
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 103,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            168
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 134,
+      "type": "GetNode",
+      "pos": [
+        1002.3147583007812,
+        7655.9189453125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            169
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 137,
+      "type": "SetNode",
+      "pos": [
+        2185.0537109375,
+        7580.63037109375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 109,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 168
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_输出-效果图",
+      "properties": {
+        "previousName": "输出-效果图",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "输出-效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 121,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1583.79052734375,
+        2668.662353515625
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 127,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 149
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 150
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 128,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        1262.4000244140625,
+        3068.4716796875
+      ],
+      "size": [
+        310,
+        82
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preprocessor": true,
+            "resolution": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "LineartStandardPreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 142,
+      "type": "GetNode",
+      "pos": [
+        959.1793823242188,
+        1537.826171875
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Get_输入-底图",
+      "properties": {},
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 143,
+      "type": "FluxGuidance",
+      "pos": [
+        2036.45703125,
+        1426.73486328125
+      ],
+      "size": [
+        240,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 95,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 182
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            184
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 144,
+      "type": "KSampler",
+      "pos": [
+        2374.195068359375,
+        1535.275634765625
+      ],
+      "size": [
+        270,
+        474
+      ],
+      "flags": {},
+      "order": 104,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 183
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 184
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 185
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 186
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        897401741031714,
+        "fixed",
+        20,
+        1,
+        "euler_ancestral",
+        "beta",
+        1
+      ]
+    },
+    {
+      "id": 152,
+      "type": "ReferenceLatent",
+      "pos": [
+        1797.4664306640625,
+        1450.7388916015625
+      ],
+      "size": [
+        197.712890625,
+        46
+      ],
+      "flags": {},
+      "order": 82,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 193
+        },
+        {
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            182
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReferenceLatent",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 154,
+      "type": "VAEEncode",
+      "pos": [
+        1526.6090087890625,
+        1489.1756591796875
+      ],
+      "size": [
+        240,
+        50
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 209
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            186,
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 149,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1474.8863525390625,
+        1595.3045654296875
+      ],
+      "size": [
+        310.3150329589844,
+        93
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            193
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "Convert to line drawing",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 155,
+      "type": "SetNode",
+      "pos": [
+        120.23278045654297,
+        1704.23486328125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "VAE"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 156,
+      "type": "VAELoader",
+      "pos": [
+        -218.2057342529297,
+        1709.394287109375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            197,
+            200
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux_vae.safetensors"
+      ]
+    },
+    {
+      "id": 158,
+      "type": "SetNode",
+      "pos": [
+        149.6273193359375,
+        1509.6572265625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "link": 198
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_CLIP",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 159,
+      "type": "Anything Everywhere3",
+      "pos": [
+        418.77374267578125,
+        1645.5308837890625
+      ],
+      "size": [
+        179.97518920898438,
+        66
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_on": "#FFD500",
+          "label": "CLIP",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 199
+        },
+        {
+          "color_on": "#FF6E6E",
+          "label": "VAE",
+          "name": "anything2",
+          "shape": 7,
+          "type": "*",
+          "link": 200
+        },
+        {
+          "color_on": "#B39DDB",
+          "label": "MODEL",
+          "name": "anything3",
+          "shape": 7,
+          "type": "*",
+          "link": 201
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere3",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 160,
+      "type": "CLIPTextEncode",
+      "pos": [
+        120.50035858154297,
+        1852.2540283203125
+      ],
+      "size": [
+        310.3150329589844,
+        93
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 202
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            203
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 161,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        468.9290466308594,
+        1855.079345703125
+      ],
+      "size": [
+        197.712890625,
+        26
+      ],
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 203
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            204
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 162,
+      "type": "SetNode",
+      "pos": [
+        469.7063903808594,
+        1941.63330078125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 83,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "link": 204
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_负向-clip",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "负向-clip"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 163,
+      "type": "NunchakuFluxDiTLoader",
+      "pos": [
+        -217.7389373779297,
+        1843.5740966796875
+      ],
+      "size": [
+        275.7613220214844,
+        202
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            201
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NunchakuFluxDiTLoader"
+      },
+      "widgets_values": [
+        "svdq-int4_r32-flux.1-kontext-dev.safetensors",
+        0,
+        "nunchaku-fp16",
+        "auto",
+        0,
+        "bfloat16",
+        "enabled"
+      ]
+    },
+    {
+      "id": 148,
+      "type": "NunchakuFluxLoraLoader",
+      "pos": [
+        1466.4732666015625,
+        1904.85498046875
+      ],
+      "size": [
+        656.690673828125,
+        89.46627807617188
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            183
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NunchakuFluxLoraLoader"
+      },
+      "widgets_values": [
+        "kontext/寻-Kontext万物一键转线稿图【无需繁琐步骤】_线稿画1.0.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 146,
+      "type": "VAEDecode",
+      "pos": [
+        2752.716552734375,
+        1457.537109375
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 110,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 188
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            205
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 164,
+      "type": "PreviewBridge",
+      "pos": [
+        3041.870361328125,
+        1633.45947265625
+      ],
+      "size": [
+        270,
+        338
+      ],
+      "flags": {},
+      "order": 115,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 205
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            206
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewBridge"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "never"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "GetNode",
+      "pos": [
+        997.6610107421875,
+        3078.776611328125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            157
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 165,
+      "type": "GetNode",
+      "pos": [
+        1004.7970581054688,
+        1653.219970703125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            208
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 153,
+      "type": "FluxKontextImageScale",
+      "pos": [
+        1203.478271484375,
+        1412.2755126953125
+      ],
+      "size": [
+        270,
+        30
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxKontextImageScale",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 166,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1208.90283203125,
+        1493.56201171875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            209
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels"
+      },
+      "widgets_values": [
+        "bicubic",
+        1
+      ]
+    },
+    {
+      "id": 157,
+      "type": "DualCLIPLoader",
+      "pos": [
+        -228.5719451904297,
+        1505.5335693359375
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            198,
+            199,
+            202
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l.safetensors",
+        "t5xxl_fp8_e4m3fn_scaled.safetensors",
+        "flux",
+        "cpu"
+      ]
+    },
+    {
+      "id": 141,
+      "type": "GetNode",
+      "pos": [
+        1984.3519287109375,
+        1648.168212890625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            185
+          ]
+        }
+      ],
+      "title": "Get_负向-clip",
+      "properties": {},
+      "widgets_values": [
+        "负向-clip"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 44,
+      "type": "DF_Text",
+      "pos": [
+        -993.965576171875,
+        2977.626220703125
+      ],
+      "size": [
+        355.8558044433594,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Text"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/原始图片1"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "DF_Text",
+      "pos": [
+        -949.1268920898438,
+        3578.917724609375
+      ],
+      "size": [
+        488.0960388183594,
+        59.003570556640625
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            211
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Text"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/原始图片2"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "Seed Generator",
+      "pos": [
+        -1861.7757568359375,
+        3382.149658203125
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Seed Generator"
+      },
+      "widgets_values": [
+        156,
+        "increment"
+      ]
+    },
+    {
+      "id": 98,
+      "type": "DF_Text",
+      "pos": [
+        -955.7963256835938,
+        4305.17822265625
+      ],
+      "size": [
+        565.6730346679688,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            221
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Text"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3755.940185546875,
+        2684.553955078125
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 129,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 220
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 225
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/控制图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 169,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3412.8681640625,
+        2799.626220703125
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 224
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            225
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/控制图-lora万物一键",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 38,
+      "type": "GetNode",
+      "pos": [
+        3433.30419921875,
+        2969.348876953125
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "GetNode",
+      "pos": [
+        2592.57421875,
+        2888.035888671875
+      ],
+      "size": [
+        279.2978820800781,
+        58.77345275878906
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            222
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "GetNode",
+      "pos": [
+        983.7582397460938,
+        2510.76708984375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            147
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 120,
+      "type": "ImageStitch",
+      "pos": [
+        1235.3536376953125,
+        2551.358154296875
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 120,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 147
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            149,
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "GetImageSize",
+      "pos": [
+        1283.6292724609375,
+        2776.0283203125
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 126,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            150
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            151
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        1988.005126953125,
+        2680.60693359375
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 128,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            220
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 171,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1595.4803466796875,
+        3653.788330078125
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 114,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 227
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 228
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 229
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            239
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 175,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3767.6298828125,
+        3669.679931640625
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 124,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 232
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 233
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 234
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/控制图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 176,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3424.557861328125,
+        3784.752197265625
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 235
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            233
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/控制图-anyline",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 177,
+      "type": "GetNode",
+      "pos": [
+        3444.993896484375,
+        3954.474853515625
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            234
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 178,
+      "type": "GetNode",
+      "pos": [
+        2604.263916015625,
+        3873.161865234375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            236
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 180,
+      "type": "GetNode",
+      "pos": [
+        995.4480590820312,
+        3495.89306640625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            237
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 181,
+      "type": "ImageStitch",
+      "pos": [
+        1247.04345703125,
+        3536.484130859375
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 91,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 237
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 240
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            226,
+            227
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 182,
+      "type": "GetImageSize",
+      "pos": [
+        1295.319091796875,
+        3761.154296875
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 108,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 238
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            228
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            229
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 183,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        1999.6949462890625,
+        3665.73291015625
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 119,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 239
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            232
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 168,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2947.056884765625,
+        2741.920654296875
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 222
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            224
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/控制图-lora万物一键",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 179,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2958.74658203125,
+        3727.046630859375
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 236
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            235
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/控制图-anyline",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 174,
+      "type": "ImageInvert",
+      "pos": [
+        1694.1751708984375,
+        4079.459228515625
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 231
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      }
+    },
+    {
+      "id": 123,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1559.5057373046875,
+        2495.05029296875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 125,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            155
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 170,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1599.315673828125,
+        3482.36181640625
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 102,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 226
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            238
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 184,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1611.197021484375,
+        4653.70361328125
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 111,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 241
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 242
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            252
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 186,
+      "type": "GetNode",
+      "pos": [
+        1025.0675048828125,
+        5063.81787109375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            244
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 187,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3783.3466796875,
+        4669.59521484375
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 121,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 245
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 246
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 247
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/控制图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 188,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3440.274658203125,
+        4784.66748046875
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 248
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            246
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/控制图-LineArt",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 189,
+      "type": "GetNode",
+      "pos": [
+        3460.710693359375,
+        4954.39013671875
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            247
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 190,
+      "type": "GetNode",
+      "pos": [
+        2619.980712890625,
+        4873.0771484375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            253
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 191,
+      "type": "GetNode",
+      "pos": [
+        1011.1646118164062,
+        4495.80859375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 192,
+      "type": "ImageStitch",
+      "pos": [
+        1262.7601318359375,
+        4536.3994140625
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 88,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 249
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 250
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            241,
+            255
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 193,
+      "type": "GetImageSize",
+      "pos": [
+        1311.0357666015625,
+        4761.06982421875
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 105,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 251
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            242
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            243
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 194,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        2015.41162109375,
+        4665.6484375
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 116,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 252
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            245
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 196,
+      "type": "ImageInvert",
+      "pos": [
+        1709.891845703125,
+        5079.37451171875
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 254
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            250
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      }
+    },
+    {
+      "id": 197,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1615.0323486328125,
+        4482.27734375
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 255
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            251
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 172,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        1274.08984375,
+        4053.59765625
+      ],
+      "size": [
+        310,
+        82
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 230
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            231
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preprocessor": true,
+            "resolution": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "AnyLineArtPreprocessor_aux",
+        512
+      ]
+    },
+    {
+      "id": 185,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        1289.8065185546875,
+        5053.51318359375
+      ],
+      "size": [
+        310,
+        82
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 244
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            254
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preprocessor": true,
+            "resolution": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 195,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2974.46337890625,
+        4726.9619140625
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 253
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            248
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/控制图-LineArt",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 198,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1617.801025390625,
+        5637.11376953125
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 112,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 256
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 257
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 258
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            266
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 199,
+      "type": "GetNode",
+      "pos": [
+        1031.671630859375,
+        6047.22802734375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            269
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 200,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3789.95166015625,
+        5653.00537109375
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 122,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 259
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 260
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 261
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/控制图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 201,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3446.879638671875,
+        5768.07763671875
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 262
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            260
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/控制图-LineartStandard",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 202,
+      "type": "GetNode",
+      "pos": [
+        3467.315673828125,
+        5937.80029296875
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            261
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 203,
+      "type": "GetNode",
+      "pos": [
+        2626.585693359375,
+        5856.4873046875
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            270
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 204,
+      "type": "GetNode",
+      "pos": [
+        1017.76904296875,
+        5479.21875
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            263
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 205,
+      "type": "ImageStitch",
+      "pos": [
+        1269.3641357421875,
+        5519.8095703125
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 89,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 263
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 264
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            256,
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 206,
+      "type": "GetImageSize",
+      "pos": [
+        1317.6397705078125,
+        5744.47998046875
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 106,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 265
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            257
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            258
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 207,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        2022.015625,
+        5649.05859375
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 117,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 266
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            259
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 208,
+      "type": "ImageInvert",
+      "pos": [
+        1716.495849609375,
+        6062.78466796875
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 267
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            264
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      }
+    },
+    {
+      "id": 209,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1621.6363525390625,
+        5465.6875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 100,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 268
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            265
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 210,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        1296.4105224609375,
+        6036.92333984375
+      ],
+      "size": [
+        310,
+        82
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 269
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preprocessor": true,
+            "resolution": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "LineartStandardPreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 211,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2981.068359375,
+        5710.3720703125
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 270
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            262
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/控制图-LineartStandard",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 212,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1624.4864501953125,
+        6640.48583984375
+      ],
+      "size": [
+        277.09783935546875,
+        336
+      ],
+      "flags": {},
+      "order": 113,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 271
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 272
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 273
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            281
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "upscale_method": true,
+            "keep_proportion": true,
+            "pad_color": true,
+            "crop_position": true,
+            "divisible_by": true,
+            "device": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1736</b> x <b>600 | 11.92MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 213,
+      "type": "GetNode",
+      "pos": [
+        1038.3570556640625,
+        7050.60009765625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            284
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 214,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3796.63671875,
+        6656.37744140625
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 123,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 274
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 275
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 276
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/控制图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 215,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3453.564697265625,
+        6771.44970703125
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 78,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 277
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            275
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/控制图-Canny",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 216,
+      "type": "GetNode",
+      "pos": [
+        3474.000732421875,
+        6941.17236328125
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            276
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 217,
+      "type": "GetNode",
+      "pos": [
+        2633.270751953125,
+        6859.859375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            285
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 218,
+      "type": "GetNode",
+      "pos": [
+        1024.454345703125,
+        6482.5908203125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            278
+          ]
+        }
+      ],
+      "title": "Get_控制图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 219,
+      "type": "ImageStitch",
+      "pos": [
+        1276.049560546875,
+        6523.181640625
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 90,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 278
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 279
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            271,
+            283
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "direction": true,
+            "match_image_size": true,
+            "spacing_width": true,
+            "spacing_color": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ]
+    },
+    {
+      "id": 220,
+      "type": "GetImageSize",
+      "pos": [
+        1324.3251953125,
+        6747.85205078125
+      ],
+      "size": [
+        210,
+        136
+      ],
+      "flags": {},
+      "order": 107,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 280
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            272
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            273
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "width: 1740, height: 603\n batch size: 1"
+      ]
+    },
+    {
+      "id": 221,
+      "type": "YogurtPreviewImageBridge",
+      "pos": [
+        2028.7010498046875,
+        6652.4306640625
+      ],
+      "size": [
+        274.3863220214844,
+        326
+      ],
+      "flags": {},
+      "order": 118,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 281
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            274
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtPreviewImageBridge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 222,
+      "type": "ImageInvert",
+      "pos": [
+        1723.1812744140625,
+        7066.15673828125
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 282
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            279
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      }
+    },
+    {
+      "id": 223,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        1628.32177734375,
+        6469.0595703125
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 101,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 283
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            280
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "megapixels": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 224,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        1303.095947265625,
+        7040.29541015625
+      ],
+      "size": [
+        310,
+        82
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 284
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            282
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preprocessor": true,
+            "resolution": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "CannyEdgePreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 225,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2987.75341796875,
+        6713.744140625
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 285
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            277
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/控制图-Canny",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 173,
+      "type": "GetNode",
+      "pos": [
+        1021.0215454101562,
+        4054.4990234375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            230
+          ]
+        }
+      ],
+      "title": "Get_效果图",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 140,
+      "type": "ImageInvert",
+      "pos": [
+        1685.8177490234375,
+        3092.04443359375
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 57,
+      "type": "SetNode",
+      "pos": [
+        522.5108032226562,
+        3520.497802734375
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 98,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 287
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_效果图",
+      "properties": {
+        "previousName": "效果图"
+      },
+      "widgets_values": [
+        "效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 27,
+      "type": "YogurtSplitPath",
+      "pos": [
+        -441.918212890625,
+        3128.855224609375
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 85,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "path",
+          "type": "STRING",
+          "widget": {
+            "name": "path"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "parent",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "name",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "stem",
+          "type": "STRING",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "suffix",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "no_dot_suffix",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSplitPath"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "type": "SetNode",
+      "pos": [
+        -189.8011016845703,
+        3124.674072265625
+      ],
+      "size": [
+        238.29940795898438,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 97,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_保存图片名字-image_name",
+      "properties": {
+        "previousName": "保存图片名字-image_name"
+      },
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "PreviewAny",
+      "pos": [
+        -331.1077880859375,
+        2693.007080078125
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 86,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 52
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 226,
+      "type": "PreviewBridge",
+      "pos": [
+        128.83477783203125,
+        3396.143798828125
+      ],
+      "size": [
+        270,
+        338
+      ],
+      "flags": {},
+      "order": 87,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 286
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            287
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewBridge"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "never"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "SetNode",
+      "pos": [
+        528.0444946289062,
+        2845.670654296875
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 96,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 289
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_控制图",
+      "properties": {
+        "previousName": "控制图"
+      },
+      "widgets_values": [
+        "控制图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 227,
+      "type": "PreviewBridge",
+      "pos": [
+        83.49626159667969,
+        2727.123779296875
+      ],
+      "size": [
+        270,
+        338
+      ],
+      "flags": {},
+      "order": 84,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 288
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            289
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewBridge"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "never"
+      ]
+    },
+    {
+      "id": 139,
+      "type": "GetNode",
+      "pos": [
+        3415.03466796875,
+        7534.99267578125
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            173
+          ]
+        }
+      ],
+      "title": "Get_输出-效果图",
+      "properties": {},
+      "widgets_values": [
+        "输出-效果图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 230,
+      "type": "YogurtStringFormat",
+      "pos": [
+        2890.95556640625,
+        7608.28857421875
+      ],
+      "size": [
+        400,
+        273
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input0",
+          "shape": 7,
+          "type": "*",
+          "link": 291
+        },
+        {
+          "name": "input1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input3",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input4",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input5",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input6",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input7",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input8",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "input9",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "formatted",
+          "type": "STRING",
+          "links": [
+            290
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtStringFormat"
+      },
+      "widgets_values": [
+        "{input0}/效果图",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 229,
+      "type": "GetNode",
+      "pos": [
+        2619.219970703125,
+        7760.25
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            291
+          ]
+        }
+      ],
+      "title": "Get_保存文件夹路径_前缀",
+      "properties": {},
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "GetNode",
+      "pos": [
+        5543.05615234375,
+        3300.780029296875
+      ],
+      "size": [
+        239.85116577148438,
+        58
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            118
+          ]
+        }
+      ],
+      "title": "Get_保存图片名字-image_name",
+      "properties": {},
+      "widgets_values": [
+        "保存图片名字-image_name"
+      ]
+    },
+    {
+      "id": 228,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        3356.766845703125,
+        7665.994140625
+      ],
+      "size": [
+        262.4234313964844,
+        101
+      ],
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            292,
+            296
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/多视角筛选数据集/线稿参考图数据集-lora万物一键/效果图",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 39,
+      "type": "YogurtSaveImageBridge",
+      "pos": [
+        3936.73876953125,
+        7509.06396484375
+      ],
+      "size": [
+        316.5035095214844,
+        494
+      ],
+      "flags": {},
+      "order": 92,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 173
+        },
+        {
+          "name": "output_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "output_dir"
+          },
+          "link": 292
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "batch",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "saved_paths",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtSaveImageBridge"
+      },
+      "widgets_values": [
+        "/data/zhangxuqi/image_data/图片数据/效果图",
+        "ComfyUI",
+        "false",
+        "true",
+        ".png",
+        4,
+        100
+      ]
+    },
+    {
+      "id": 100,
+      "type": "SetNode",
+      "pos": [
+        3598.041259765625,
+        7879.42138671875
+      ],
+      "size": [
+        213.36190795898438,
+        58
+      ],
+      "flags": {},
+      "order": 93,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "link": 296
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_效果图-保存文件夹路径",
+      "properties": {
+        "previousName": "效果图-保存文件夹路径"
+      },
+      "widgets_values": [
+        "效果图-保存文件夹路径"
+      ]
+    },
+    {
+      "id": 167,
+      "type": "SetNode",
+      "pos": [
+        -293.4811096191406,
+        4306.93115234375
+      ],
+      "size": [
+        308.40277099609375,
+        58
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 221
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_保存文件夹路径_前缀",
+      "properties": {
+        "previousName": "保存文件夹路径_前缀"
+      },
+      "widgets_values": [
+        "保存文件夹路径_前缀"
+      ]
+    }
+  ],
+  "links": [
+    [
+      29,
+      52,
+      2,
+      27,
+      0,
+      "STRING"
+    ],
+    [
+      30,
+      27,
+      3,
+      28,
+      0,
+      "*"
+    ],
+    [
+      43,
+      36,
+      0,
+      39,
+      2,
+      "STRING"
+    ],
+    [
+      45,
+      38,
+      0,
+      40,
+      2,
+      "STRING"
+    ],
+    [
+      46,
+      42,
+      0,
+      41,
+      0,
+      "COMBO"
+    ],
+    [
+      52,
+      52,
+      4,
+      51,
+      0,
+      "*"
+    ],
+    [
+      53,
+      43,
+      0,
+      52,
+      0,
+      "COMBO"
+    ],
+    [
+      56,
+      55,
+      0,
+      52,
+      1,
+      "INT"
+    ],
+    [
+      57,
+      56,
+      0,
+      41,
+      1,
+      "INT"
+    ],
+    [
+      118,
+      106,
+      0,
+      110,
+      2,
+      "STRING"
+    ],
+    [
+      119,
+      107,
+      0,
+      110,
+      1,
+      "STRING"
+    ],
+    [
+      121,
+      111,
+      0,
+      110,
+      0,
+      "STRING"
+    ],
+    [
+      122,
+      112,
+      0,
+      54,
+      0,
+      "INT"
+    ],
+    [
+      147,
+      119,
+      0,
+      120,
+      0,
+      "IMAGE"
+    ],
+    [
+      149,
+      120,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      150,
+      125,
+      0,
+      121,
+      2,
+      "INT"
+    ],
+    [
+      151,
+      125,
+      1,
+      121,
+      3,
+      "INT"
+    ],
+    [
+      152,
+      121,
+      0,
+      122,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      120,
+      0,
+      123,
+      0,
+      "IMAGE"
+    ],
+    [
+      155,
+      123,
+      0,
+      125,
+      0,
+      "IMAGE"
+    ],
+    [
+      157,
+      127,
+      0,
+      128,
+      0,
+      "IMAGE"
+    ],
+    [
+      159,
+      132,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      161,
+      129,
+      0,
+      130,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      130,
+      0,
+      131,
+      0,
+      "IMAGE"
+    ],
+    [
+      164,
+      129,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      165,
+      131,
+      0,
+      135,
+      2,
+      "INT"
+    ],
+    [
+      166,
+      131,
+      1,
+      135,
+      3,
+      "INT"
+    ],
+    [
+      167,
+      135,
+      0,
+      136,
+      0,
+      "IMAGE"
+    ],
+    [
+      168,
+      136,
+      0,
+      137,
+      0,
+      "*"
+    ],
+    [
+      169,
+      134,
+      0,
+      129,
+      1,
+      "IMAGE"
+    ],
+    [
+      173,
+      139,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      175,
+      128,
+      0,
+      140,
+      0,
+      "IMAGE"
+    ],
+    [
+      182,
+      152,
+      0,
+      143,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      183,
+      148,
+      0,
+      144,
+      0,
+      "MODEL"
+    ],
+    [
+      184,
+      143,
+      0,
+      144,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      185,
+      141,
+      0,
+      144,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      186,
+      154,
+      0,
+      144,
+      3,
+      "LATENT"
+    ],
+    [
+      188,
+      144,
+      0,
+      146,
+      0,
+      "LATENT"
+    ],
+    [
+      193,
+      149,
+      0,
+      152,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      194,
+      154,
+      0,
+      152,
+      1,
+      "LATENT"
+    ],
+    [
+      197,
+      156,
+      0,
+      155,
+      0,
+      "*"
+    ],
+    [
+      198,
+      157,
+      0,
+      158,
+      0,
+      "*"
+    ],
+    [
+      199,
+      157,
+      0,
+      159,
+      0,
+      "CLIP"
+    ],
+    [
+      200,
+      156,
+      0,
+      159,
+      1,
+      "VAE"
+    ],
+    [
+      201,
+      163,
+      0,
+      159,
+      2,
+      "MODEL"
+    ],
+    [
+      202,
+      157,
+      0,
+      160,
+      0,
+      "CLIP"
+    ],
+    [
+      203,
+      160,
+      0,
+      161,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      204,
+      161,
+      0,
+      162,
+      0,
+      "*"
+    ],
+    [
+      205,
+      146,
+      0,
+      164,
+      0,
+      "IMAGE"
+    ],
+    [
+      206,
+      164,
+      0,
+      120,
+      1,
+      "IMAGE"
+    ],
+    [
+      208,
+      165,
+      0,
+      166,
+      0,
+      "IMAGE"
+    ],
+    [
+      209,
+      166,
+      0,
+      154,
+      0,
+      "IMAGE"
+    ],
+    [
+      210,
+      44,
+      0,
+      43,
+      0,
+      "*"
+    ],
+    [
+      211,
+      45,
+      0,
+      42,
+      0,
+      "*"
+    ],
+    [
+      220,
+      122,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      221,
+      98,
+      0,
+      167,
+      0,
+      "*"
+    ],
+    [
+      222,
+      101,
+      0,
+      168,
+      0,
+      "*"
+    ],
+    [
+      224,
+      168,
+      0,
+      169,
+      0,
+      "*"
+    ],
+    [
+      225,
+      169,
+      0,
+      40,
+      1,
+      "STRING"
+    ],
+    [
+      226,
+      181,
+      0,
+      170,
+      0,
+      "IMAGE"
+    ],
+    [
+      227,
+      181,
+      0,
+      171,
+      0,
+      "IMAGE"
+    ],
+    [
+      228,
+      182,
+      0,
+      171,
+      2,
+      "INT"
+    ],
+    [
+      229,
+      182,
+      1,
+      171,
+      3,
+      "INT"
+    ],
+    [
+      230,
+      173,
+      0,
+      172,
+      0,
+      "IMAGE"
+    ],
+    [
+      231,
+      172,
+      0,
+      174,
+      0,
+      "IMAGE"
+    ],
+    [
+      232,
+      183,
+      0,
+      175,
+      0,
+      "IMAGE"
+    ],
+    [
+      233,
+      176,
+      0,
+      175,
+      1,
+      "STRING"
+    ],
+    [
+      234,
+      177,
+      0,
+      175,
+      2,
+      "STRING"
+    ],
+    [
+      235,
+      179,
+      0,
+      176,
+      0,
+      "*"
+    ],
+    [
+      236,
+      178,
+      0,
+      179,
+      0,
+      "*"
+    ],
+    [
+      237,
+      180,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      238,
+      170,
+      0,
+      182,
+      0,
+      "IMAGE"
+    ],
+    [
+      239,
+      171,
+      0,
+      183,
+      0,
+      "IMAGE"
+    ],
+    [
+      240,
+      174,
+      0,
+      181,
+      1,
+      "IMAGE"
+    ],
+    [
+      241,
+      192,
+      0,
+      184,
+      0,
+      "IMAGE"
+    ],
+    [
+      242,
+      193,
+      0,
+      184,
+      2,
+      "INT"
+    ],
+    [
+      243,
+      193,
+      1,
+      184,
+      3,
+      "INT"
+    ],
+    [
+      244,
+      186,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ],
+    [
+      245,
+      194,
+      0,
+      187,
+      0,
+      "IMAGE"
+    ],
+    [
+      246,
+      188,
+      0,
+      187,
+      1,
+      "STRING"
+    ],
+    [
+      247,
+      189,
+      0,
+      187,
+      2,
+      "STRING"
+    ],
+    [
+      248,
+      195,
+      0,
+      188,
+      0,
+      "*"
+    ],
+    [
+      249,
+      191,
+      0,
+      192,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      196,
+      0,
+      192,
+      1,
+      "IMAGE"
+    ],
+    [
+      251,
+      197,
+      0,
+      193,
+      0,
+      "IMAGE"
+    ],
+    [
+      252,
+      184,
+      0,
+      194,
+      0,
+      "IMAGE"
+    ],
+    [
+      253,
+      190,
+      0,
+      195,
+      0,
+      "*"
+    ],
+    [
+      254,
+      185,
+      0,
+      196,
+      0,
+      "IMAGE"
+    ],
+    [
+      255,
+      192,
+      0,
+      197,
+      0,
+      "IMAGE"
+    ],
+    [
+      256,
+      205,
+      0,
+      198,
+      0,
+      "IMAGE"
+    ],
+    [
+      257,
+      206,
+      0,
+      198,
+      2,
+      "INT"
+    ],
+    [
+      258,
+      206,
+      1,
+      198,
+      3,
+      "INT"
+    ],
+    [
+      259,
+      207,
+      0,
+      200,
+      0,
+      "IMAGE"
+    ],
+    [
+      260,
+      201,
+      0,
+      200,
+      1,
+      "STRING"
+    ],
+    [
+      261,
+      202,
+      0,
+      200,
+      2,
+      "STRING"
+    ],
+    [
+      262,
+      211,
+      0,
+      201,
+      0,
+      "*"
+    ],
+    [
+      263,
+      204,
+      0,
+      205,
+      0,
+      "IMAGE"
+    ],
+    [
+      264,
+      208,
+      0,
+      205,
+      1,
+      "IMAGE"
+    ],
+    [
+      265,
+      209,
+      0,
+      206,
+      0,
+      "IMAGE"
+    ],
+    [
+      266,
+      198,
+      0,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      267,
+      210,
+      0,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      268,
+      205,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      269,
+      199,
+      0,
+      210,
+      0,
+      "IMAGE"
+    ],
+    [
+      270,
+      203,
+      0,
+      211,
+      0,
+      "*"
+    ],
+    [
+      271,
+      219,
+      0,
+      212,
+      0,
+      "IMAGE"
+    ],
+    [
+      272,
+      220,
+      0,
+      212,
+      2,
+      "INT"
+    ],
+    [
+      273,
+      220,
+      1,
+      212,
+      3,
+      "INT"
+    ],
+    [
+      274,
+      221,
+      0,
+      214,
+      0,
+      "IMAGE"
+    ],
+    [
+      275,
+      215,
+      0,
+      214,
+      1,
+      "STRING"
+    ],
+    [
+      276,
+      216,
+      0,
+      214,
+      2,
+      "STRING"
+    ],
+    [
+      277,
+      225,
+      0,
+      215,
+      0,
+      "*"
+    ],
+    [
+      278,
+      218,
+      0,
+      219,
+      0,
+      "IMAGE"
+    ],
+    [
+      279,
+      222,
+      0,
+      219,
+      1,
+      "IMAGE"
+    ],
+    [
+      280,
+      223,
+      0,
+      220,
+      0,
+      "IMAGE"
+    ],
+    [
+      281,
+      212,
+      0,
+      221,
+      0,
+      "IMAGE"
+    ],
+    [
+      282,
+      224,
+      0,
+      222,
+      0,
+      "IMAGE"
+    ],
+    [
+      283,
+      219,
+      0,
+      223,
+      0,
+      "IMAGE"
+    ],
+    [
+      284,
+      213,
+      0,
+      224,
+      0,
+      "IMAGE"
+    ],
+    [
+      285,
+      217,
+      0,
+      225,
+      0,
+      "*"
+    ],
+    [
+      286,
+      41,
+      0,
+      226,
+      0,
+      "IMAGE"
+    ],
+    [
+      287,
+      226,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      288,
+      52,
+      0,
+      227,
+      0,
+      "IMAGE"
+    ],
+    [
+      289,
+      227,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      290,
+      230,
+      0,
+      228,
+      0,
+      "*"
+    ],
+    [
+      291,
+      229,
+      0,
+      230,
+      0,
+      "*"
+    ],
+    [
+      292,
+      228,
+      0,
+      39,
+      1,
+      "STRING"
+    ],
+    [
+      296,
+      228,
+      0,
+      100,
+      0,
+      "STRING"
+    ],
+    [
+      297,
+      156,
+      0,
+      154,
+      1,
+      "VAE"
+    ],
+    [
+      298,
+      157,
+      0,
+      149,
+      0,
+      "CLIP"
+    ],
+    [
+      299,
+      163,
+      0,
+      148,
+      0,
+      "MODEL"
+    ],
+    [
+      300,
+      156,
+      0,
+      146,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "控制图-处理-文件夹",
+      "bounding": [
+        -1005.6380615234375,
+        2584.676025390625,
+        1817.260498046875,
+        600.3475341796875
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "效果图-处理-文件夹",
+      "bounding": [
+        -998.9883422851562,
+        3265.55322265625,
+        1808.9635009765625,
+        558.0850830078125
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "保存-控制图-使用lora",
+      "bounding": [
+        2471.2998046875,
+        2478.666748046875,
+        1907.098388671875,
+        794.4553833007812
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "保存-效果图",
+      "bounding": [
+        2518.551025390625,
+        7385.36865234375,
+        1922.90966796875,
+        641.7975463867188
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "保存文件夹路径",
+      "bounding": [
+        -998.0501708984375,
+        3875.319580078125,
+        1803.4703369140625,
+        783.5870361328125
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "保存-效果图-文本text",
+      "bounding": [
+        4754.2734375,
+        2489.116943359375,
+        2051.12158203125,
+        1228.22119140625
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "遍历文件种子",
+      "bounding": [
+        -1906.7811279296875,
+        3123.44580078125,
+        722.2215576171875,
+        708.809814453125
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "制作-控制图-使用lora",
+      "bounding": [
+        969.5055541992188,
+        2357.05029296875,
+        1420.000732421875,
+        917.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "制作-效果图",
+      "bounding": [
+        989.4198608398438,
+        7357.8603515625,
+        1459.99951171875,
+        676.0573120117188
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "效果图->白模图",
+      "bounding": [
+        949.1793823242188,
+        1288.7349853515625,
+        4114.9013671875,
+        820.88525390625
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "加载底模",
+      "bounding": [
+        -238.5719451904297,
+        1367.5335693359375,
+        950.751953125,
+        707.1673583984375
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 17,
+      "title": "保存-控制图-使用anline",
+      "bounding": [
+        2482.989501953125,
+        3463.792724609375,
+        1907.098388671875,
+        794.4553833007812
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 18,
+      "title": "制作-控制图-anyline",
+      "bounding": [
+        981.1953735351562,
+        3342.17626953125,
+        1420.000732421875,
+        917.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 19,
+      "title": "保存-控制图-使用lineart",
+      "bounding": [
+        2498.706298828125,
+        4463.7080078125,
+        1907.098388671875,
+        794.4553833007812
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 20,
+      "title": "制作-控制图-lineart",
+      "bounding": [
+        996.9119262695312,
+        4342.091796875,
+        1420.000732421875,
+        917.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 21,
+      "title": "保存-控制图-使用LineartStandard",
+      "bounding": [
+        2505.311279296875,
+        5447.1181640625,
+        1907.098388671875,
+        794.4553833007812
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 22,
+      "title": "制作-控制图-LineartStandard",
+      "bounding": [
+        1003.516357421875,
+        5325.501953125,
+        1420.000732421875,
+        917.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 23,
+      "title": "保存-控制图-使用LineartStandard",
+      "bounding": [
+        2511.996337890625,
+        6450.490234375,
+        1907.098388671875,
+        794.4553833007812
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 24,
+      "title": "制作-控制图-Canny",
+      "bounding": [
+        1010.20166015625,
+        6328.8740234375,
+        1420.000732421875,
+        917.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 70,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.313842837672101,
+      "offset": [
+        -710.4466722888349,
+        -2120.60830721951
+      ]
+    },
+    "frontendVersion": "1.25.11",
+    "ue_links": [
+      {
+        "downstream": 154,
+        "downstream_slot": 1,
+        "upstream": "156",
+        "upstream_slot": 0,
+        "controller": 159,
+        "type": "VAE"
+      },
+      {
+        "downstream": 149,
+        "downstream_slot": 0,
+        "upstream": "157",
+        "upstream_slot": 0,
+        "controller": 159,
+        "type": "CLIP"
+      },
+      {
+        "downstream": 148,
+        "downstream_slot": 0,
+        "upstream": "163",
+        "upstream_slot": 0,
+        "controller": 159,
+        "type": "MODEL"
+      },
+      {
+        "downstream": 146,
+        "downstream_slot": 1,
+        "upstream": "156",
+        "upstream_slot": 0,
+        "controller": 159,
+        "type": "VAE"
+      }
+    ],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

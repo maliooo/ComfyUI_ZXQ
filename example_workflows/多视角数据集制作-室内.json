@@ -2468,7 +2468,7 @@
         "Node name for S&R": "Text Multiline"
       },
       "widgets_values": [
-        "Four different angle views of the same scene",
+        "Two different angle views of the same scene",
         [
           false,
           true

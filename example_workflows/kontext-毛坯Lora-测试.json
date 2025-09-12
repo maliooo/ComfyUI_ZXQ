@@ -1,0 +1,3533 @@
+{
+  "id": "300b6b03-3140-4784-8fd5-a42d8a4ad28e",
+  "revision": 0,
+  "last_node_id": 344,
+  "last_link_id": 540,
+  "nodes": [
+    {
+      "id": 56,
+      "type": "SetNode",
+      "pos": [
+        8834.751953125,
+        346.23565673828125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "VAE"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 57,
+      "type": "VAELoader",
+      "pos": [
+        8496.3134765625,
+        351.3951110839844
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            94,
+            125
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux_vae.safetensors"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "DualCLIPLoader",
+      "pos": [
+        8485.947265625,
+        147.53439331054688
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            93,
+            119,
+            124
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l.safetensors",
+        "t5xxl_fp8_e4m3fn_scaled.safetensors",
+        "flux",
+        "cpu"
+      ]
+    },
+    {
+      "id": 169,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        9209.17578125,
+        1603.9932861328125
+      ],
+      "size": [
+        262.4234313964844,
+        113
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 232
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            233
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "/home/public/filebrowser/data/测试-01/临时文件/天气变化/黄昏",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 104,
+      "type": "ZXQ_ListImageDir",
+      "pos": [
+        9524.7197265625,
+        1497.6202392578125
+      ],
+      "size": [
+        383.8169860839844,
+        210
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "folder_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "folder_path"
+          },
+          "link": 233
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            231
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "filebrowser_url",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "image_count",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZXQ_ListImageDir"
+      },
+      "widgets_values": [
+        "None",
+        12,
+        "fixed",
+        "jpg,jpeg,png,gif,bmp,webp"
+      ]
+    },
+    {
+      "id": 168,
+      "type": "DF_Text",
+      "pos": [
+        9261.8173828125,
+        1344.4189453125
+      ],
+      "size": [
+        453.1268005371094,
+        65.72943115234375
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            232
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Text"
+      },
+      "widgets_values": [
+        "/home/public/filebrowser/data/测试-01/临时文件/天气变化/黄昏"
+      ]
+    },
+    {
+      "id": 191,
+      "type": "SetNode",
+      "pos": [
+        9849.4677734375,
+        954.8544921875
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_seed_0",
+      "properties": {
+        "previousName": "seed_0"
+      },
+      "widgets_values": [
+        "seed_0"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 192,
+      "type": "SetNode",
+      "pos": [
+        9856.4677734375,
+        1081.9935302734375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 261
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_seed_1",
+      "properties": {
+        "previousName": "seed_1"
+      },
+      "widgets_values": [
+        "seed_1"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 190,
+      "type": "Seed Generator",
+      "pos": [
+        9527.9208984375,
+        945.1018676757812
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            260
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Seed Generator"
+      },
+      "widgets_values": [
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 193,
+      "type": "Seed Generator",
+      "pos": [
+        9534.9208984375,
+        1072.240966796875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            261
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Seed Generator"
+      },
+      "widgets_values": [
+        1233,
+        "fixed"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "SetNode",
+      "pos": [
+        8864.146484375,
+        151.6580047607422
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_CLIP",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 92,
+      "type": "Anything Everywhere3",
+      "pos": [
+        9133.29296875,
+        287.5316467285156
+      ],
+      "size": [
+        179.97518920898438,
+        66
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_on": "#FFD500",
+          "label": "CLIP",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 124
+        },
+        {
+          "color_on": "#FF6E6E",
+          "label": "VAE",
+          "name": "anything2",
+          "shape": 7,
+          "type": "*",
+          "link": 125
+        },
+        {
+          "color_on": "#B39DDB",
+          "label": "MODEL",
+          "name": "anything3",
+          "shape": 7,
+          "type": "*",
+          "link": 214
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere3",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 86,
+      "type": "CLIPTextEncode",
+      "pos": [
+        8835.01953125,
+        494.2547912597656
+      ],
+      "size": [
+        310.3150329589844,
+        93
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            97
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 61,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        9183.4482421875,
+        497.0801086425781
+      ],
+      "size": [
+        197.712890625,
+        26
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            103
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 68,
+      "type": "SetNode",
+      "pos": [
+        9184.2255859375,
+        583.6342163085938
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_负向-clip",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "负向-clip"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 58,
+      "type": "NunchakuFluxDiTLoader",
+      "pos": [
+        8496.7802734375,
+        485.57489013671875
+      ],
+      "size": [
+        275.7613220214844,
+        202
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NunchakuFluxDiTLoader"
+      },
+      "widgets_values": [
+        "svdq-int4_r32-flux.1-kontext-dev.safetensors",
+        0,
+        "nunchaku-fp16",
+        "auto",
+        0,
+        "bfloat16",
+        "enabled"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "FluxKontextImageScale",
+      "pos": [
+        9168.1748046875,
+        972.8084106445312
+      ],
+      "size": [
+        270,
+        30
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 239
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxKontextImageScale",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 76,
+      "type": "SetNode",
+      "pos": [
+        9160.19140625,
+        1062.754150390625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_输入-底图",
+      "properties": {
+        "previousName": "输入-底图"
+      },
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 167,
+      "type": "PreviewImage",
+      "pos": [
+        9537.0380859375,
+        1766.79541015625
+      ],
+      "size": [
+        465.9566650390625,
+        534.8594970703125
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 231
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 247,
+      "type": "GetNode",
+      "pos": [
+        12638.0888671875,
+        2346.249267578125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            359
+          ]
+        }
+      ],
+      "title": "Get_负向-clip",
+      "properties": {},
+      "widgets_values": [
+        "负向-clip"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 249,
+      "type": "FluxGuidance",
+      "pos": [
+        12633.7744140625,
+        2239.49462890625
+      ],
+      "size": [
+        240,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 356
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            358
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 252,
+      "type": "GetNode",
+      "pos": [
+        12690.662109375,
+        2480.5234375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            361
+          ]
+        }
+      ],
+      "title": "Get_seed_0",
+      "properties": {},
+      "widgets_values": [
+        "seed_0"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 256,
+      "type": "VAEDecode",
+      "pos": [
+        13350.0341796875,
+        2270.296875
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 363
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            365
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 91,
+      "type": "LoadImage",
+      "pos": [
+        8474.9404296875,
+        928.77978515625
+      ],
+      "size": [
+        678.40478515625,
+        1177.132080078125
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            239
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "PixPin_2025-09-11_11-10-01.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 245,
+      "type": "ReferenceLatent",
+      "pos": [
+        12394.7841796875,
+        2263.49853515625
+      ],
+      "size": [
+        197.712890625,
+        46
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 353
+        },
+        {
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 354
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            356
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReferenceLatent",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 303,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        12691.5302734375,
+        44.21652603149414
+      ],
+      "size": [
+        391.2538757324219,
+        337.34869384765625
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 469
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            471,
+            473
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "```json\n{\n    \"Positive_Prompt\": \"luxury living room, photorealistic hard renovation with deep gray walls, black wooden ceiling with intricate details, white marble flooring with black speckles; furniture set: plush fabric sofa in dark gray, modern TV cabinet in glossy black, elegant dining table with chairs, high-end floor lamp, abstract wall art; color palette: deep gray primary, black secondary, white tertiary; lighting: grand chandelier with warm light, recessed lights for ambient glow, soft daylight from large window, balanced exposure, physically-based lighting, soft shadows, high detail textures, tidy layout, wide-angle 28mm, slight top-down perspective, rule-of-thirds composition\",\n    \"Negative_Prompt\": \"distortion, low resolution, overexposed, underexposed, oversaturated, cartoonish, unrealistic reflections, harsh glare, text watermark, frame border, duplicated objects, misaligned furniture, extreme fisheye, noise, artifacts\"\n}\n```",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 304,
+      "type": "ShowText|pysssss",
+      "pos": [
+        13623.087890625,
+        290.991943359375
+      ],
+      "size": [
+        314.79852294921875,
+        281.4187927246094
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 470
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "distortion, low resolution, overexposed, underexposed, oversaturated, cartoonish, unrealistic reflections, harsh glare, text watermark, frame border, duplicated objects, misaligned furniture, extreme fisheye, noise, artifacts"
+      ]
+    },
+    {
+      "id": 307,
+      "type": "YogurtRegexNode",
+      "pos": [
+        13189.765625,
+        265.3591613769531
+      ],
+      "size": [
+        400,
+        318
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 473
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            470,
+            475
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtRegexNode"
+      },
+      "widgets_values": [
+        "",
+        "\"Negative_Prompt\"\\s*:\\s*\"([^\"]*)\"",
+        "extract",
+        "\\g<1>",
+        0,
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 308,
+      "type": "ShowText|pysssss",
+      "pos": [
+        13426.654296875,
+        628.8392333984375
+      ],
+      "size": [
+        314.79852294921875,
+        281.4187927246094
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 474
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "失真、低分辨率、曝光过度、曝光不足、过饱和、卡通、不切实际的反射、刺眼的眩光、文本水印、边框、重复的物体、错位的家具、极度鱼眼、噪音、伪影"
+      ]
+    },
+    {
+      "id": 309,
+      "type": "EG_FX_BDAPI",
+      "pos": [
+        12706.19140625,
+        610.9154663085938
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 475
+        }
+      ],
+      "outputs": [
+        {
+          "name": "文本",
+          "type": "STRING",
+          "links": [
+            474
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EG_FX_BDAPI"
+      },
+      "widgets_values": [
+        "免费百度API申请网站https://fanyi-api.baidu.com/?ext_channel=Aldtype&fr=pcHeader \n申请后在下方输入APP ID与密钥。\n仅第一次需要输入即可自动保存。\n更多SD教程尽在B站@灵仙儿和二狗子🐕",
+        "",
+        "",
+        "en-zh",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 314,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        12169.818359375,
+        -278.2364501953125
+      ],
+      "size": [
+        381.7663879394531,
+        618.4668579101562
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 480
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            482
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "【任务说明】\n给定一张室内毛坯参考图（空房间，仅保留建筑结构），请基于该图像生成适配 Flux 模型的高质量英文提示（正向与反向）。目标是在不改变空间结构的前提下，为场景添加完整的硬装与软装，使其符合所选风格与现代审美。\n\n【风格选择（从中选一）】\nseed:889439473658302\n[现代 / 极简 / 奶油风 / 侘寂风 / 轻奢 / 新中式 / 中古风 / 法式 / 原木风 / 美式], 随机选择一个风格\n\n【硬装设计（与所选风格一致）】\n- 墙面：材质（如涂料、木饰面、石材、微水泥）、颜色、线条/造型是否简洁或强调纹理\n- 天花：吊顶形式（平吊/无主灯/嵌入式线性灯）、轮廓层次、灯槽与洗墙光\n- 地面：材质（木地板/石材/大板砖/地毯区域）、纹理粗细、光泽度\n- 门窗与踢脚：颜色与收口细节，是否留细边框、隐藏门等\n\n【软装配置（与所选风格一致）】\n- 家具：沙发（面料与颜色）、茶几、餐桌椅、边几、电视柜/收纳、床与床头、书桌、置物架\n- 布艺与材质：窗帘（纱/布）、地毯、抱枕、铺盖，强调材质触感（亚麻、羊毛、棉、皮革、绒面等）\n- 装饰与配件：挂画/相框、花瓶、雕塑、书籍、灯具（落地灯/台灯/壁灯/吊灯）\n\n【配色方案（符合现代审美）】\n- 主色：用于大面积（墙/地/大件家具）\n- 辅色：用于中等面积（窗帘/地毯/边柜）\n- 点缀色：小面积高饱和点缀（抱枕/花器/艺术品），提升层次\n\n【灯光与氛围】\n- 光源：无主灯体系/线性灯/轨道灯/局部点光；色温与明暗对比\n- 自然光：根据窗户朝向强化侧光与体积感\n- 反射与材质：控制高光/漫反射，体现材质真实度\n\n【构图与镜头】\n- 视角：室内广角，三分法构图，保留空间深度与透视线\n- 镜头参数：广角（24–35mm 等效），轻微俯拍或平视，避免畸变\n- 画面整洁：减少杂乱，强调重点区域\n\n【空间约束】\n- 保留原始建筑结构（开间、梁柱、窗门位置）\n- 仅通过装饰与陈设完成改造，不新增不合理墙体\n\n【输出要求（仅返回 JSON）】\n- 仅返回合法 JSON 字符串（UTF-8），不输出任何额外文字、注释或代码块标记。\n- 字段：\n  \n    \"Positive_Prompt\": \"英文正向提示，单段；包含所选风格、硬装与软装材质和颜色、配色主/辅/点缀、灯光方案、构图与镜头参数、真实质感词汇（photorealistic, physically-based lighting, detailed textures 等）；语气客观具体、无口语和冗余修辞。\",\n    \"Negative_Prompt\": \"英文反向提示，逗号分隔；包含：distortion, low resolution, overexposed, underexposed, oversaturated, cartoonish, unrealistic reflections, harsh glare, text watermark, frame border, duplicated objects, misaligned furniture, extreme fisheye, noise, artifacts\"\n  \n\n- 生成规则：\n  - Positive_Prompt 必须与所选风格一致，并细化具体材质、颜色与触感；\n  - 配色与 materials/furniture/lighting 的描述需一致且相互印证；\n  - 镜头参数使用 24–35mm 范围具体数值（建议 28mm）；\n  - Negative_Prompt 使用英文逗号分隔的短语列表；\n  - 不得输出与空间结构相矛盾的内容。\n\n\n- 示例 JSON：\n  \n    \"Positive_Prompt\": \"modern interior renovation, photorealistic hard renovation with smooth microcement walls in warm light gray, seamless ceiling with recessed linear lights and soft cove lighting, natural oak wood flooring with matte finish; furniture set: low-profile fabric sofa in warm beige, round wood coffee table, minimalist TV console, linen curtains, wool area rug, accent metal floor lamp, abstract wall art; color palette: neutral warm gray primary, light oak secondary, muted teal accents; soft daylight from large window, balanced exposure, physically-based lighting, soft shadows, high detail textures, tidy layout, wide-angle 28mm, slight top-down perspective, rule-of-thirds composition\",\n    \"Negative_Prompt\": \"distortion, low resolution\"\n  \n\n- 修改要求：将图片修改为客厅，沙发，电视机，橱柜，深灰色墙壁，黑色木质天花板，豪华吊灯，白色大理石地面伴随黑色斑点",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 315,
+      "type": "Malio_LLM_By_Qwen_VL",
+      "pos": [
+        12703.435546875,
+        -364.1231994628906
+      ],
+      "size": [
+        411.9058532714844,
+        194
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_base64",
+          "type": "STRING",
+          "widget": {
+            "name": "image_base64"
+          },
+          "link": 481
+        },
+        {
+          "name": "llm_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "llm_prompt"
+          },
+          "link": 482
+        }
+      ],
+      "outputs": [
+        {
+          "name": "llm_answer",
+          "type": "STRING",
+          "links": [
+            469
+          ]
+        },
+        {
+          "name": "llm_prompt",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "llm_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Malio_LLM_By_Qwen_VL"
+      },
+      "widgets_values": [
+        "",
+        "qwen-vl-max",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 316,
+      "type": "easy imageToBase64",
+      "pos": [
+        12380.634765625,
+        -546.0025634765625
+      ],
+      "size": [
+        148.85800170898438,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 499
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            481
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy imageToBase64"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 321,
+      "type": "ReferenceLatent",
+      "pos": [
+        11272.7060546875,
+        1327.82421875
+      ],
+      "size": [
+        197.712890625,
+        46
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 485
+        },
+        {
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 486
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            487
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReferenceLatent",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 322,
+      "type": "GetNode",
+      "pos": [
+        11509.3193359375,
+        1366.53125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            489
+          ]
+        }
+      ],
+      "title": "Get_负向-clip",
+      "properties": {},
+      "widgets_values": [
+        "负向-clip"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 323,
+      "type": "FluxGuidance",
+      "pos": [
+        11505.0048828125,
+        1259.775390625
+      ],
+      "size": [
+        240,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 487
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            488
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 324,
+      "type": "KSampler",
+      "pos": [
+        11842.7431640625,
+        1368.31640625
+      ],
+      "size": [
+        270,
+        474
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 488
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 489
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 490
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            492
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        897401741031714,
+        "fixed",
+        20,
+        1,
+        "euler_ancestral",
+        "beta",
+        1
+      ]
+    },
+    {
+      "id": 328,
+      "type": "VAEEncode",
+      "pos": [
+        10981.3642578125,
+        1409.7623291015625
+      ],
+      "size": [
+        240,
+        50
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 497
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            486,
+            490
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 248,
+      "type": "GetNode",
+      "pos": [
+        11556.4970703125,
+        2350.5859375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Get_输入-底图",
+      "properties": {},
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 331,
+      "type": "CLIPTextEncode",
+      "pos": [
+        11026.431640625,
+        1588.894775390625
+      ],
+      "size": [
+        310.3150329589844,
+        93
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            485
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "Remove all construction debris and pipes while maintaining the main structure, perspective, and windows",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 326,
+      "type": "VAEDecode",
+      "pos": [
+        12221.2646484375,
+        1290.578125
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 492
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            496,
+            511
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 333,
+      "type": "GetNode",
+      "pos": [
+        10673.3896484375,
+        1430.631103515625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            497
+          ]
+        }
+      ],
+      "title": "Get_输入-底图",
+      "properties": {},
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 334,
+      "type": "GetNode",
+      "pos": [
+        12169.6591796875,
+        -683.8218994140625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            499
+          ]
+        }
+      ],
+      "title": "Get_输入-底图",
+      "properties": {},
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 305,
+      "type": "YogurtRegexNode",
+      "pos": [
+        13198.2021484375,
+        -88.4084243774414
+      ],
+      "size": [
+        382.39886474609375,
+        318
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 471
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            476,
+            477,
+            500
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YogurtRegexNode"
+      },
+      "widgets_values": [
+        "",
+        "\"Positive_Prompt\"\\s*:\\s*\"([^\"]*)\"",
+        "extract",
+        "\\g<1>",
+        0,
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 332,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        13012.37890625,
+        1289.556884765625
+      ],
+      "size": [
+        552.6386108398438,
+        565.3927612304688
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 496
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 503
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mynbi_00001_.png&type=temp&subfolder=&rand=0.5991878096731773"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mynbi_00002_.png&type=temp&subfolder=&rand=0.4355849211246785"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 338,
+      "type": "GetNode",
+      "pos": [
+        12455.3818359375,
+        1449.194580078125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            503
+          ]
+        }
+      ],
+      "title": "Get_输入-底图",
+      "properties": {},
+      "widgets_values": [
+        "输入-底图"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 311,
+      "type": "ShowText|pysssss",
+      "pos": [
+        13644.78515625,
+        -55.12116241455078
+      ],
+      "size": [
+        295.9052429199219,
+        293.6692810058594
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 477
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "luxury living room, photorealistic hard renovation with deep gray walls, black wooden ceiling with intricate details, white marble flooring with black speckles; furniture set: plush fabric sofa in dark gray, modern TV cabinet in glossy black, elegant dining table with chairs, high-end floor lamp, abstract wall art; color palette: deep gray primary, black secondary, white tertiary; lighting: grand chandelier with warm light, recessed lights for ambient glow, soft daylight from large window, balanced exposure, physically-based lighting, soft shadows, high detail textures, tidy layout, wide-angle 28mm, slight top-down perspective, rule-of-thirds composition"
+      ]
+    },
+    {
+      "id": 319,
+      "type": "SetNode",
+      "pos": [
+        11354.7646484375,
+        725.4411010742188
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 484
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_随机种子_seed",
+      "properties": {
+        "previousName": ""
+      },
+      "widgets_values": [
+        "随机种子_seed"
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 318,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        11386.8818359375,
+        492.4974365234375
+      ],
+      "size": [
+        262.4234313964844,
+        113
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 483
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            479
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "889439473658302",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 320,
+      "type": "Seed Generator",
+      "pos": [
+        11045.4501953125,
+        700.737548828125
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            483,
+            484
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Seed Generator"
+      },
+      "widgets_values": [
+        889439473658302,
+        "fixed"
+      ]
+    },
+    {
+      "id": 250,
+      "type": "KSampler",
+      "pos": [
+        13176.1875,
+        2384.768798828125
+      ],
+      "size": [
+        270,
+        474
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 357
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 358
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 359
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 430
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 361
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            363
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        897401741031714,
+        "fixed",
+        30,
+        1,
+        "euler_ancestral",
+        "beta",
+        1
+      ]
+    },
+    {
+      "id": 336,
+      "type": "GetNode",
+      "pos": [
+        10636.44921875,
+        3041.99072265625
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            509
+          ]
+        }
+      ],
+      "title": "Get_毛坯正向提示词",
+      "properties": {},
+      "widgets_values": [
+        "毛坯正向提示词"
+      ]
+    },
+    {
+      "id": 342,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        11784.4716796875,
+        2254.500732421875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 511
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            512,
+            513
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        0.5
+      ]
+    },
+    {
+      "id": 313,
+      "type": "StringReplace",
+      "pos": [
+        11615.7626953125,
+        -179.2970733642578
+      ],
+      "size": [
+        440.2789306640625,
+        485.55255126953125
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 523
+        },
+        {
+          "name": "replace",
+          "type": "STRING",
+          "widget": {
+            "name": "replace"
+          },
+          "link": 479
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            480
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringReplace"
+      },
+      "widgets_values": [
+        "",
+        "<INPUT_SEED>",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 343,
+      "type": "StringReplace",
+      "pos": [
+        11069.01953125,
+        -337.3253479003906
+      ],
+      "size": [
+        440.2789306640625,
+        485.55255126953125
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 522
+        },
+        {
+          "name": "replace",
+          "type": "STRING",
+          "widget": {
+            "name": "replace"
+          },
+          "link": 524
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            523
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringReplace"
+      },
+      "widgets_values": [
+        "",
+        "<USER_INPUT>",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 317,
+      "type": "Text Multiline",
+      "pos": [
+        10424.880859375,
+        -581.5718994140625
+      ],
+      "size": [
+        523.1218872070312,
+        617.5692749023438
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            522
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "【任务说明】\n给定一张室内毛坯参考图（空房间，仅保留建筑结构），请基于该图像生成适配 Flux 模型的高质量英文提示（正向与反向）。目标是在不改变空间结构的前提下，为场景添加完整的硬装与软装，使其符合所选风格与现代审美。\n\n【风格选择（从中选一）】\nseed:<INPUT_SEED>\n[现代 / 极简 / 奶油风 / 侘寂风 / 轻奢 / 新中式 / 中古风 / 法式 / 原木风 / 美式], 随机选择一个风格\n\n【硬装设计（与所选风格一致）】\n- 墙面：材质（如涂料、木饰面、石材、微水泥）、颜色、线条/造型是否简洁或强调纹理\n- 天花：吊顶形式（平吊/无主灯/嵌入式线性灯）、轮廓层次、灯槽与洗墙光\n- 地面：材质（木地板/石材/大板砖/地毯区域）、纹理粗细、光泽度\n- 门窗与踢脚：颜色与收口细节，是否留细边框、隐藏门等\n\n【软装配置（与所选风格一致）】\n- 家具：沙发（面料与颜色）、茶几、餐桌椅、边几、电视柜/收纳、床与床头、书桌、置物架\n- 布艺与材质：窗帘（纱/布）、地毯、抱枕、铺盖，强调材质触感（亚麻、羊毛、棉、皮革、绒面等）\n- 装饰与配件：挂画/相框、花瓶、雕塑、书籍、灯具（落地灯/台灯/壁灯/吊灯）\n\n【配色方案（符合现代审美）】\n- 主色：用于大面积（墙/地/大件家具）\n- 辅色：用于中等面积（窗帘/地毯/边柜）\n- 点缀色：小面积高饱和点缀（抱枕/花器/艺术品），提升层次\n\n【灯光与氛围】\n- 光源：无主灯体系/线性灯/轨道灯/局部点光；色温与明暗对比\n- 自然光：根据窗户朝向强化侧光与体积感\n- 反射与材质：控制高光/漫反射，体现材质真实度\n\n【构图与镜头】\n- 视角：室内广角，三分法构图，保留空间深度与透视线\n- 镜头参数：广角（24–35mm 等效），轻微俯拍或平视，避免畸变\n- 画面整洁：减少杂乱，强调重点区域\n\n【空间约束】\n- 保留原始建筑结构（开间、梁柱、窗门位置）\n- 仅通过装饰与陈设完成改造，不新增不合理墙体\n\n【输出要求（仅返回 JSON）】\n- 仅返回合法 JSON 字符串（UTF-8），不输出任何额外文字、注释或代码块标记。\n- 字段：\n  {\n    \"Positive_Prompt\": \"英文正向提示，单段；包含所选风格、硬装与软装材质和颜色、配色主/辅/点缀、灯光方案、构图与镜头参数、真实质感词汇（photorealistic, physically-based lighting, detailed textures 等）；语气客观具体、无口语和冗余修辞。\",\n    \"Negative_Prompt\": \"英文反向提示，逗号分隔；包含：distortion, low resolution, overexposed, underexposed, oversaturated, cartoonish, unrealistic reflections, harsh glare, text watermark, frame border, duplicated objects, misaligned furniture, extreme fisheye, noise, artifacts\"\n  }\n\n- 生成规则：\n  - Positive_Prompt 必须与所选风格一致，并细化具体材质、颜色与触感；\n  - 配色与 materials/furniture/lighting 的描述需一致且相互印证；\n  - 镜头参数使用 24–35mm 范围具体数值（建议 28mm）；\n  - Negative_Prompt 使用英文逗号分隔的短语列表；\n  - 不得输出与空间结构相矛盾的内容。\n\n\n- 示例 JSON：\n  {\n    \"Positive_Prompt\": \"modern interior renovation, photorealistic hard renovation with smooth microcement walls in warm light gray, seamless ceiling with recessed linear lights and soft cove lighting, natural oak wood flooring with matte finish; furniture set: low-profile fabric sofa in warm beige, round wood coffee table, minimalist TV console, linen curtains, wool area rug, accent metal floor lamp, abstract wall art; color palette: neutral warm gray primary, light oak secondary, muted teal accents; soft daylight from large window, balanced exposure, physically-based lighting, soft shadows, high detail textures, tidy layout, wide-angle 28mm, slight top-down perspective, rule-of-thirds composition\",\n    \"Negative_Prompt\": \"distortion, low resolution\"\n  }\n\n- 修改要求：将图片修改为<USER_INPUT>",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 259,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        13813.5048828125,
+        2323.096923828125
+      ],
+      "size": [
+        552.6386108398438,
+        565.3927612304688
+      ],
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 365
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 513
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qpmzj_00001_.png&type=temp&subfolder=&rand=0.7551507949122326"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qpmzj_00002_.png&type=temp&subfolder=&rand=0.8062429204956832"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 344,
+      "type": "Text Multiline",
+      "pos": [
+        10507.375,
+        376.0332336425781
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            524
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "客厅，沙发，电视机，橱柜，深灰色墙壁，黑色木质天花板，豪华吊灯，白色大理石地面伴随黑色斑点",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 335,
+      "type": "SetNode",
+      "pos": [
+        14011.3056640625,
+        -6.134097099304199
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 500
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_毛坯正向提示词",
+      "properties": {
+        "previousName": "毛坯正向提示词"
+      },
+      "widgets_values": [
+        "毛坯正向提示词"
+      ]
+    },
+    {
+      "id": 310,
+      "type": "EG_FX_BDAPI",
+      "pos": [
+        13159.529296875,
+        -522.2119750976562
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 476
+        }
+      ],
+      "outputs": [
+        {
+          "name": "文本",
+          "type": "STRING",
+          "links": [
+            472
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EG_FX_BDAPI"
+      },
+      "widgets_values": [
+        "免费百度API申请网站https://fanyi-api.baidu.com/?ext_channel=Aldtype&fr=pcHeader \n申请后在下方输入APP ID与密钥。\n仅第一次需要输入即可自动保存。\n更多SD教程尽在B站@灵仙儿和二狗子🐕",
+        "",
+        "",
+        "en-zh",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 306,
+      "type": "ShowText|pysssss",
+      "pos": [
+        13668.77734375,
+        -531.7919311523438
+      ],
+      "size": [
+        295.9052429199219,
+        293.6692810058594
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 472
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "豪华客厅，照片般逼真的硬装修，深灰色墙壁，黑色木天花板，细节精致，白色大理石地板，有黑色斑点；家具套装：深灰色长毛绒布艺沙发、亮黑色现代电视柜、优雅的带椅子餐桌、高端落地灯、抽象壁画；调色板：深灰色为主，黑色次，白色第三；照明：带暖光的大吊灯，用于环境发光的嵌入式灯，大窗户的柔和日光，平衡曝光，基于物理的照明，柔和的阴影，高细节纹理，整洁的布局，广角28mm，轻微的自上而下透视，三分构图法"
+      ]
+    },
+    {
+      "id": 341,
+      "type": "Text Multiline",
+      "pos": [
+        10646.2333984375,
+        2737.189453125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            508
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "maintaining the original structure and viewpoint",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 340,
+      "type": "Text Concatenate",
+      "pos": [
+        11147.021484375,
+        2910.04345703125
+      ],
+      "size": [
+        270,
+        142
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "link": 508
+        },
+        {
+          "name": "text_b",
+          "shape": 7,
+          "type": "STRING",
+          "link": 509
+        },
+        {
+          "name": "text_c",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "text_d",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            510
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        ", ",
+        "true"
+      ]
+    },
+    {
+      "id": 337,
+      "type": "ZnzmoPreviewAnyBridge",
+      "pos": [
+        11487.431640625,
+        2863.328857421875
+      ],
+      "size": [
+        375.41107177734375,
+        246.9361572265625
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "link": 510
+        }
+      ],
+      "outputs": [
+        {
+          "name": "data",
+          "type": "*",
+          "links": [
+            502
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZnzmoPreviewAnyBridge"
+      },
+      "widgets_values": [
+        "maintaining the original structure and viewpoint, luxury living room, photorealistic hard renovation with deep gray walls, black wooden ceiling with intricate details, white marble flooring with black speckles; furniture set: plush fabric sofa in dark gray, modern TV cabinet in glossy black, elegant dining table with chairs, high-end floor lamp, abstract wall art; color palette: deep gray primary, black secondary, white tertiary; lighting: grand chandelier with warm light, recessed lights for ambient glow, soft daylight from large window, balanced exposure, physically-based lighting, soft shadows, high detail textures, tidy layout, wide-angle 28mm, slight top-down perspective, rule-of-thirds composition",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 253,
+      "type": "NunchakuFluxLoraLoader",
+      "pos": [
+        12129.734375,
+        2934.724609375
+      ],
+      "size": [
+        473.3271789550781,
+        89.46627807617188
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            357
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NunchakuFluxLoraLoader"
+      },
+      "widgets_values": [
+        "kontext/kontext-indoor-zxq-毛坯-v1.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 254,
+      "type": "CLIPTextEncode",
+      "pos": [
+        12171.7919921875,
+        2700.7275390625
+      ],
+      "size": [
+        310.3150329589844,
+        93
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 502
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            353
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43"
+      },
+      "widgets_values": [
+        "Render the image into a white model style,",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 244,
+      "type": "VAEEncode",
+      "pos": [
+        12133.701171875,
+        2478.666259765625
+      ],
+      "size": [
+        240,
+        50
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 512
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            354,
+            430
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      93,
+      63,
+      0,
+      55,
+      0,
+      "*"
+    ],
+    [
+      94,
+      57,
+      0,
+      56,
+      0,
+      "*"
+    ],
+    [
+      97,
+      86,
+      0,
+      61,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      103,
+      61,
+      0,
+      68,
+      0,
+      "*"
+    ],
+    [
+      119,
+      63,
+      0,
+      86,
+      0,
+      "CLIP"
+    ],
+    [
+      124,
+      63,
+      0,
+      92,
+      0,
+      "CLIP"
+    ],
+    [
+      125,
+      57,
+      0,
+      92,
+      1,
+      "VAE"
+    ],
+    [
+      153,
+      112,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      214,
+      58,
+      0,
+      92,
+      2,
+      "MODEL"
+    ],
+    [
+      231,
+      104,
+      0,
+      167,
+      0,
+      "IMAGE"
+    ],
+    [
+      232,
+      168,
+      0,
+      169,
+      0,
+      "*"
+    ],
+    [
+      233,
+      169,
+      0,
+      104,
+      0,
+      "COMBO"
+    ],
+    [
+      239,
+      91,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      260,
+      190,
+      0,
+      191,
+      0,
+      "*"
+    ],
+    [
+      261,
+      193,
+      0,
+      192,
+      0,
+      "*"
+    ],
+    [
+      353,
+      254,
+      0,
+      245,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      354,
+      244,
+      0,
+      245,
+      1,
+      "LATENT"
+    ],
+    [
+      356,
+      245,
+      0,
+      249,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      357,
+      253,
+      0,
+      250,
+      0,
+      "MODEL"
+    ],
+    [
+      358,
+      249,
+      0,
+      250,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      359,
+      247,
+      0,
+      250,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      361,
+      252,
+      0,
+      250,
+      4,
+      "INT"
+    ],
+    [
+      363,
+      250,
+      0,
+      256,
+      0,
+      "LATENT"
+    ],
+    [
+      365,
+      256,
+      0,
+      259,
+      0,
+      "IMAGE"
+    ],
+    [
+      430,
+      244,
+      0,
+      250,
+      3,
+      "LATENT"
+    ],
+    [
+      469,
+      315,
+      0,
+      303,
+      0,
+      "*"
+    ],
+    [
+      470,
+      307,
+      0,
+      304,
+      0,
+      "STRING"
+    ],
+    [
+      471,
+      303,
+      1,
+      305,
+      0,
+      "STRING"
+    ],
+    [
+      472,
+      310,
+      0,
+      306,
+      0,
+      "STRING"
+    ],
+    [
+      473,
+      303,
+      1,
+      307,
+      0,
+      "STRING"
+    ],
+    [
+      474,
+      309,
+      0,
+      308,
+      0,
+      "STRING"
+    ],
+    [
+      475,
+      307,
+      0,
+      309,
+      0,
+      "STRING"
+    ],
+    [
+      476,
+      305,
+      0,
+      310,
+      0,
+      "STRING"
+    ],
+    [
+      477,
+      305,
+      0,
+      311,
+      0,
+      "STRING"
+    ],
+    [
+      479,
+      318,
+      1,
+      313,
+      1,
+      "STRING"
+    ],
+    [
+      480,
+      313,
+      0,
+      314,
+      0,
+      "*"
+    ],
+    [
+      481,
+      316,
+      0,
+      315,
+      0,
+      "STRING"
+    ],
+    [
+      482,
+      314,
+      1,
+      315,
+      1,
+      "STRING"
+    ],
+    [
+      483,
+      320,
+      0,
+      318,
+      0,
+      "*"
+    ],
+    [
+      484,
+      320,
+      0,
+      319,
+      0,
+      "*"
+    ],
+    [
+      485,
+      331,
+      0,
+      321,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      486,
+      328,
+      0,
+      321,
+      1,
+      "LATENT"
+    ],
+    [
+      487,
+      321,
+      0,
+      323,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      488,
+      323,
+      0,
+      324,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      489,
+      322,
+      0,
+      324,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      490,
+      328,
+      0,
+      324,
+      3,
+      "LATENT"
+    ],
+    [
+      492,
+      324,
+      0,
+      326,
+      0,
+      "LATENT"
+    ],
+    [
+      496,
+      326,
+      0,
+      332,
+      0,
+      "IMAGE"
+    ],
+    [
+      497,
+      333,
+      0,
+      328,
+      0,
+      "IMAGE"
+    ],
+    [
+      499,
+      334,
+      0,
+      316,
+      0,
+      "IMAGE"
+    ],
+    [
+      500,
+      305,
+      0,
+      335,
+      0,
+      "*"
+    ],
+    [
+      502,
+      337,
+      0,
+      254,
+      1,
+      "STRING"
+    ],
+    [
+      503,
+      338,
+      0,
+      332,
+      1,
+      "IMAGE"
+    ],
+    [
+      508,
+      341,
+      0,
+      340,
+      0,
+      "STRING"
+    ],
+    [
+      509,
+      336,
+      0,
+      340,
+      1,
+      "STRING"
+    ],
+    [
+      510,
+      340,
+      0,
+      337,
+      0,
+      "*"
+    ],
+    [
+      511,
+      326,
+      0,
+      342,
+      0,
+      "IMAGE"
+    ],
+    [
+      512,
+      342,
+      0,
+      244,
+      0,
+      "IMAGE"
+    ],
+    [
+      513,
+      342,
+      0,
+      259,
+      1,
+      "IMAGE"
+    ],
+    [
+      522,
+      317,
+      0,
+      343,
+      0,
+      "STRING"
+    ],
+    [
+      523,
+      343,
+      0,
+      313,
+      0,
+      "STRING"
+    ],
+    [
+      524,
+      344,
+      0,
+      343,
+      1,
+      "STRING"
+    ],
+    [
+      533,
+      57,
+      0,
+      256,
+      1,
+      "VAE"
+    ],
+    [
+      534,
+      58,
+      0,
+      324,
+      0,
+      "MODEL"
+    ],
+    [
+      535,
+      57,
+      0,
+      328,
+      1,
+      "VAE"
+    ],
+    [
+      536,
+      63,
+      0,
+      331,
+      0,
+      "CLIP"
+    ],
+    [
+      537,
+      57,
+      0,
+      326,
+      1,
+      "VAE"
+    ],
+    [
+      538,
+      58,
+      0,
+      253,
+      0,
+      "MODEL"
+    ],
+    [
+      539,
+      63,
+      0,
+      254,
+      0,
+      "CLIP"
+    ],
+    [
+      540,
+      57,
+      0,
+      244,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "输入图片和参数",
+      "bounding": [
+        8464.9404296875,
+        832.77978515625,
+        1611.52734375,
+        1478.8751220703125
+      ],
+      "color": "#8A8",
+      "font_size": 40,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "加载底模",
+      "bounding": [
+        8475.947265625,
+        9.534390449523926,
+        950.751953125,
+        707.1673583984375
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "毛坯 -》效果图",
+      "bounding": [
+        10427.5166015625,
+        2051.36376953125,
+        4521.86865234375,
+        1169.1387939453125
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 19,
+      "title": "kontext-去除毛坯杂物",
+      "bounding": [
+        10417.7275390625,
+        1121.775390625,
+        4114.9013671875,
+        820.88525390625
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    },
+    {
+      "id": 20,
+      "title": "毛坯提示词",
+      "bounding": [
+        10414.880859375,
+        -821.8218994140625,
+        3810.4423828125,
+        1742.0799560546875
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.254013268524201,
+      "offset": [
+        -10863.788575310964,
+        -409.97650026397764
+      ]
+    },
+    "frontendVersion": "1.25.11",
+    "ue_links": [
+      {
+        "downstream": 256,
+        "downstream_slot": 1,
+        "upstream": "57",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "VAE"
+      },
+      {
+        "downstream": 324,
+        "downstream_slot": 0,
+        "upstream": "58",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "MODEL"
+      },
+      {
+        "downstream": 328,
+        "downstream_slot": 1,
+        "upstream": "57",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "VAE"
+      },
+      {
+        "downstream": 331,
+        "downstream_slot": 0,
+        "upstream": "63",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "CLIP"
+      },
+      {
+        "downstream": 326,
+        "downstream_slot": 1,
+        "upstream": "57",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "VAE"
+      },
+      {
+        "downstream": 253,
+        "downstream_slot": 0,
+        "upstream": "58",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "MODEL"
+      },
+      {
+        "downstream": 254,
+        "downstream_slot": 0,
+        "upstream": "63",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "CLIP"
+      },
+      {
+        "downstream": 244,
+        "downstream_slot": 1,
+        "upstream": "57",
+        "upstream_slot": 0,
+        "controller": 92,
+        "type": "VAE"
+      }
+    ],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

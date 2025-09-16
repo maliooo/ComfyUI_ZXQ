@@ -22,8 +22,9 @@ class LatentBlend:
 
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "blend"
-
-    CATEGORY = "_for_testing"
+    _NODE_ZXQ = "融合 latent 融合 latent blend"
+    DESCRIPTION = "融合 latent, 如果使用pad模式, 会创建一个mask, 标识原始图像区域（非填充区域）"
+    CATEGORY = "ZXQ/图片处理"
 
     def blend(self, samples1, samples2, blend_factor:float, blend_mode: str="normal", mask1=None, mask2=None):
         try:
